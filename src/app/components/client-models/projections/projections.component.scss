@@ -1,0 +1,16 @@
+table {
+  th,
+  td {
+    width: 25%;
+    &.actions-td {
+      .action-buttons {
+        display: inline-flex;
+        justify-content: space-between;
+        width: 100px;
+        i {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}

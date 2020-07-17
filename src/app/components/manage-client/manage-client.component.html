@@ -1,0 +1,59 @@
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="tabs-container">
+        <div class="client-name-title">
+          <b>Client Name : {{currentClient.clientName}} </b>
+          <button (click)="goToViewClient()" class="btn btn-primary btn-sm">
+            Back
+          </button>
+        </div>
+        <ul id="tab-list" class="nav nav-tabs" role="tablist">
+          <li>
+            <a (click)="onTabChange('setup-model-tab')" [ngClass]="{'active': activeTabName == 'setup-model-tab'}"
+              class="nav-link">Setup</a>
+          </li>
+          <li>
+            <a (click)="onTabChange('client-users-tab')" [ngClass]="{'active': activeTabName == 'client-users-tab'}"
+              class="nav-link">Users</a>
+          </li>
+          <li>
+            <a (click)="onTabChange('projections-tab')" [ngClass]="{'active': activeTabName == 'projections-tab'}"
+              class="nav-link">Projections</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active">
+            <div class="panel-body">
+              <ng-container *ngIf="activeTabName == 'setup-model-tab'">
+                <ng-container *ngTemplateOutlet="SetupTabTemplate"></ng-container>
+              </ng-container>
+              <ng-container *ngIf="activeTabName == 'projections-tab'">
+                <ng-container *ngTemplateOutlet="ProjectionsTemplate"></ng-container>
+              </ng-container>
+
+              <ng-container *ngIf="activeTabName == 'client-users-tab'">
+                <ng-container *ngTemplateOutlet="ClientUsersTemplate"></ng-container>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<ng-template #SetupTabTemplate>
+  <app-setup-model-tab (onModelCreated)="onModelCreated($event)"></app-setup-model-tab>
+</ng-template>
+
+<ng-template #ProjectionsTemplate>
+  <app-projections></app-projections>
+</ng-template>
+
+<ng-template #ClientUsersTemplate>
+  <ng-container *ngIf="currentClient">
+    <app-users [clientId]="currentClient.clientId"></app-users>
+  </ng-container>
+</ng-template>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .model-container {
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            min-width: 80vh;
+        }
+
+        .model-container textarea {
+            min-height: 80vh;
+            width: 50%;
+            resize: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="model-container">
+        <textarea name="input-model" id="input-model" cols="30" rows="10"></textarea>
+        <textarea name="output-model" id="output-model" cols="30" rows="10"></textarea>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+
+    <script>
+        function _getType(tsTypeName) {
+            var type = tsTypeName;
+            switch (tsTypeName) {
+                case 'number':
+                    type = 'int';
+                    break;
+                case 'boolean':
+                    type = 'bool';
+                    break;
+                case 'Date':
+                    type = 'DateTime';
+                    break;
+            }
+            return type;
+        }
+
+        function _getCapitalizeFirstLetter(name) {
+            return name.charAt(0).toUpperCase() + name.slice(1)
+        }
+
+        $("#input-model").on('input', function (e) {
+            console.log(e.target.value);
+            var lines = e.target.value.split('\n');
+            var convertedLines = [];
+            lines.forEach((line) => {
+                var convertedLine = line;
+                try {
+                    var accessModifier = "public";
+                    var name = _getCapitalizeFirstLetter(line.split(':')[0].trim());
+                    var type = _getType(line.split(':')[1].split('=')[0].trim());
+                    convertedLine = "\t" + accessModifier + " " + type + " " + name + " { get; set; }";
+                } catch (ex) { }
+                convertedLines.push(convertedLine);
+            });
+            $("#output-model").val(convertedLines.join('\n'));
+        });
+    </script>
+
+</body>
+
+</html>

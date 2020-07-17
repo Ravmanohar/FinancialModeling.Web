@@ -1,0 +1,424 @@
+body {
+  font-family: Calibri, Verdana, Helvetica, Arial, sans-serif;
+  color: #101010;
+
+  .tab-box,
+  .report-title {
+    // background: rgb(31, 78, 121) !important;
+    background: #deebf7 !important;
+  }
+  // table.ps-table td,
+  // button,
+  a.btn-primary,
+  button.btn-primary,
+  button.dixon-button {
+    background: #deebf7 !important;
+    color: #000 !important;
+    border-color: #deebf7;
+    font-weight: bold;
+    &:focus,
+    &:hover {
+      border-color: #deebf7;
+      cursor: pointer;
+    }
+    &:disabled {
+      border-color: #deebf7;
+      color: #ddd;
+      cursor: not-allowed;
+    }
+  }
+
+  a#side-menu-toggle-btn {
+    // background: #deebf7 !important;
+    // color: #fff !important;
+    // border-color: #deebf7;
+    background: #203864 !important;
+    color: #fff !important;
+    border-color: #203864;
+  }
+
+  .nav-header,
+  .navbar-default.navbar-static-side {
+    // background: rgb(31, 78, 121) !important;
+    background: #deebf7 !important;
+  }
+
+  .model-dashboard-container .report-container .report-title,
+  .report-container #tbl-main-dashboard tr:first-child td {
+    background: rgb(46, 117, 182) !important;
+  }
+
+  .gray-bg,
+  .bg-muted {
+    background-color: #fff;
+  }
+
+  .dixon-bg {
+    background-color: #9dc3e6;
+  }
+
+  // .nav-tabs .nav-item.show .nav-link,
+  // .nav-tabs .nav-link.active {
+  //   border: 2px solid #9dc3e6 !important;
+  //   background-color: #9dc3e6;
+  //   color: #ffffff;
+  // }
+  .nav-tabs {
+    li {
+      margin-right: 10px;
+      .nav-link {
+        // border: 2px solid #9dc3e6 !important;
+        // background-color: #fff;
+        // color: #000;
+        &.show,
+        &.active {
+          border: 2px solid #9dc3e6 !important;
+          background-color: #9dc3e6;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+  .tabs-container .panel-body {
+    border: 2px solid #9dc3e6 !important;
+  }
+}
+
+/* You can add global styles to this file, and also import other style files */
+#page-wrapper {
+  height: 100vh;
+}
+
+li {
+  outline: none;
+}
+
+button.disabled {
+  pointer-events: none;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.wrapper-content {
+  min-height: 80vh;
+  background-color: #fff;
+}
+
+.disabled-form,
+.disable-button {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.no-records-found {
+  text-align: center;
+}
+
+@import "styles/radio";
+@import "styles/tooltip";
+@import "styles/checkbox";
+
+body {
+  background: #fff !important;
+}
+
+.navbar-default.navbar-static-side {
+  height: 100%;
+  background: #2f4050 !important;
+}
+
+.table-container {
+  width: 100%;
+  overflow: auto;
+  padding: 20px 0;
+}
+
+.yearly-revenue-container {
+  overflow-x: scroll;
+  height: 70vh;
+  #main-dashboard {
+    th.side-header,
+    td.side-header {
+      min-width: 320px;
+      max-width: 320px;
+    }
+  }
+}
+
+.ps-table {
+  width: 100%;
+  border: 1px solid #ccc;
+  * {
+    box-sizing: border-box;
+  }
+
+  tr {
+    &.header-tr {
+      td {
+        background-color: #203864;
+        color: #fff;
+        font-size: 1rem;
+        padding: 10px;
+        font-weight: bold;
+      }
+      &.inline-header {
+        font-size: 1rem;
+      }
+    }
+
+    th.side-header,
+    td.side-header {
+      width: 200px;
+    }
+  }
+
+  td.side-header,
+  th.side-header {
+    &:first-child {
+      padding-right: 20px;
+    }
+  }
+
+  td,
+  th {
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    height: 22px;
+    empty-cells: show;
+    line-height: 21px;
+    padding: 0 4px;
+    background-color: #fff;
+    vertical-align: top;
+    // overflow: hidden;
+    outline-width: 0;
+    background-clip: padding-box;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    min-width: 100px;
+    // width: 100px;
+    // max-width: 100px;
+
+    &.header-row {
+      background: #4472c4;
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: #fff;
+      height: 30px;
+    }
+
+    &[type="rate"],
+    &[type="percent"],
+    &[type="textbox"],
+    &[type="time"],
+    &[type="number"] {
+      // background-color: #78aeda;
+      // color: #fff;
+      background-color: #deeaf6;
+      color: #000;
+
+      cursor: pointer;
+      input {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        outline: none;
+        border: none;
+        height: 100%;
+
+        // background: #78aeda;
+        // color: #fff;
+        background-color: #deeaf6;
+        color: #000;
+
+        text-align: center;
+      }
+    }
+
+    &[type="rate"] {
+      position: relative;
+      &::before {
+        content: "$";
+        position: absolute;
+        // left: 40%;
+        left: 20px;
+      }
+    }
+    &[type="percent"] {
+      position: relative;
+      &::after {
+        content: "%";
+        position: absolute;
+        // right: 40%;
+        right: 20px;
+      }
+    }
+  }
+}
+
+.model-dashboard-container {
+  min-height: 100vh;
+  .report-container {
+    margin-top: 10px;
+    &:last-of-type {
+      margin-bottom: 20px;
+    }
+
+    .report-title {
+      display: flex;
+      justify-content: space-between;
+
+      cursor: pointer;
+      background-color: #2196f3;
+      color: #fff;
+      font-size: 1rem;
+      padding: 10px;
+      font-weight: bold;
+
+      .fa-chevron-down {
+        display: none;
+      }
+      &.open {
+        .fa-chevron-down {
+          display: inline-block;
+        }
+        .fa-chevron-up {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// Start : Styles
+table.table-centered {
+  td,
+  th {
+    width: 100px;
+    text-align: center;
+  }
+}
+
+.title-row,
+.side-lable {
+  font-weight: bold;
+}
+
+.setup-wizard {
+  .wizard-header {
+    .wizard-title {
+      cursor: pointer;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: underline;
+      margin-bottom: 20px;
+    }
+  }
+  .wizard-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+    button {
+      margin-left: 10px;
+      width: 100px;
+    }
+  }
+}
+
+.main-label {
+  font-size: 18px;
+  font-weight: bold;
+}
+.col-form-label {
+  font-weight: bold;
+}
+
+.input-euro {
+  position: relative;
+}
+.input-euro.left input {
+  padding-left: 18px;
+}
+.input-euro.right input {
+  padding-right: 18px;
+  text-align: end;
+}
+
+.input-euro:before {
+  position: absolute;
+  top: 0;
+  content: "€";
+}
+.input-euro.left:before {
+  left: 5px;
+}
+.input-euro.right:before {
+  right: 5px;
+}
+
+.card-box {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px 0 0 0;
+}
+
+input.rate {
+  background-image: url("assets/img/dollar.svg");
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+input.percent {
+  background-image: url("assets/img/percent.svg");
+  background-repeat: no-repeat;
+  background-position: 50px;
+}
+// End : Styles
+
+.equipment-type-dropdown {
+  .dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: #fff !important;
+    color: #000 !important;
+    border: 1px solid #e5e6e7 !important;
+  }
+  .dropdown-toggle,
+  .dropdown-menu {
+    width: 100%;
+  }
+}
+
+#tbl-equipment-cost {
+  table-layout: fixed;
+  td {
+    width: 180px;
+    &.header-td {
+      width: 180px;
+    }
+  }
+}
+.wizard-page {
+  overflow-x: auto;
+}
+
+.dixon-card {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px 20px;
+  // margin: 10px;
+}
+
+.pointer-events-none {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.no-data-row {
+  font-weight: bold;
+  font-size: 1.5rem;
+}

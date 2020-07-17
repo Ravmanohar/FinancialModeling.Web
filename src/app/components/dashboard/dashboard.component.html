@@ -1,0 +1,93 @@
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row chart-row header-row">
+    <div class="col-md-6 left-container">
+      <!-- <input type="text" placeholder="Enter Model Name" />
+      <i class="fa fa-save"></i>
+      <i class="fa fa-download"></i> -->
+    </div>
+    <div class="col-md-6 right-container">
+      <ng-container *ngIf="authService.loggedInUser.role == 'Admin'">
+        <select (change)="onClientChange($event)" [(ngModel)]="clientId" id="client-list" name="client-list"
+          class="form-control">
+          <option *ngIf="clientId == 0" value="0">Select Client</option>
+          <option *ngFor="let client of clientList" [value]="client.clientId">
+            {{client.clientName}}
+          </option>
+        </select>
+      </ng-container>
+
+      <select (change)="onProjectionChange($event)" [(ngModel)]="projectionId" id="projection-list"
+        name="projection-list" class="form-control">
+        <option *ngIf="projectionId == 0" value="0">Select Projection</option>
+        <option *ngFor="let projection of projectionsList" [value]="projection.projectionId">
+          {{projection.projectionName}}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <ng-container *ngIf="clientId == 0 && projectionId == 0">
+    <ng-container *ngTemplateOutlet="MessageTemplate; context:{message:'Please Select Client'}"></ng-container>
+  </ng-container>
+
+  <ng-container *ngIf="clientId != 0 && projectionId == 0">
+    <ng-container *ngTemplateOutlet="MessageTemplate; context:{message:'Please Select Projection'}"></ng-container>
+  </ng-container>
+
+  <ng-container *ngIf="clientId != 0 && projectionId != 0">
+    <div class="row chart-row">
+      <div class="col-md-6">
+        <div class="title">Five Year Projection</div>
+        <div class="dixon-card">
+          <canvas id="fiveYearProjectionLineChart" height="100"></canvas>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="title">Profit</div>
+        <div class="dixon-card">
+          <div class="form-group row" style="height: 140px;">
+            <label class="col-md-12 col-form-label">Equipment Budget: {{profitInfo.equipmentBudget}}</label>
+            <label class="col-md-12 col-form-label">
+              <b>
+                <i class="fa fa-info dixon-tooltip" [attr.info]="'Excluding Warranty Fees'"></i>
+              </b>
+              Annual Operating Cost: {{profitInfo.annualOperatingCost}}
+            </label>
+            <label class="col-md-12 col-form-label">Annual Revenue: {{profitInfo.annualRevenue}} </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row chart-row">
+      <div class="col-md-4">
+        <div class="title">Revenue</div>
+        <div class="dixon-card">
+          <canvas id="RevenueChart" height="140"></canvas>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="title">Equipment Cost</div>
+        <div class="dixon-card">
+          <canvas id="EquipmentCostChart" height="140"></canvas>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="title">Ongoing Fees</div>
+        <div class="dixon-card">
+          <canvas id="OngoingFeesChart" height="140"></canvas>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+
+<ng-template #MessageTemplate let-message="message">
+  <div class="row chart-row">
+    <div class="col-md-12">
+      <div class="message-title">
+        {{message}}
+      </div>
+    </div>
+  </div>
+</ng-template>

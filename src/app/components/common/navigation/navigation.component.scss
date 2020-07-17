@@ -1,0 +1,33 @@
+.profile-element {
+  color: #ddd;
+}
+
+ul#side-menu {
+  li.nav-header {
+    padding: 5px 25px;
+    a {
+      color: #000 !important;
+    }
+  }
+  li.menu-tab {
+    &.active {
+      border-left: 4px solid #5b87c5;
+      background: #9dc3e6;
+    }
+    a {
+      color: #000 !important;
+      &:hover,
+      &:focus {
+        background-color: unset;
+        color: #000;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.dixon-logo {
+  img {
+    margin: 5px 0px;
+  }
+}

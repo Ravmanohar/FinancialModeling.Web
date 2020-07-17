@@ -1,0 +1,270 @@
+<app-loader *ngIf="isShowLoader"></app-loader>
+
+
+<div class="row" [ngClass]="{'pointer-events-none':isShowLoader}">
+  <div class="col-md-6 col-sm-12">
+    <ng-container *ngTemplateOutlet="ManageZonesTemplate"></ng-container>
+  </div>
+
+  <div class="col-md-6 col-sm-12">
+    <ng-container *ngTemplateOutlet="ManageEquipmentCostTemplate"></ng-container>
+  </div>
+
+  <div class="col-md-12 col-sm-12">
+    <ng-container *ngTemplateOutlet="ManageClientModelTemplate"></ng-container>
+  </div>
+
+</div>
+
+<ng-container *ngTemplateOutlet="SetupModelModalTemplate"></ng-container>
+<ng-template #SetupModelModalTemplate>
+  <div *ngIf="isShowModal" class="modal inmodal fade" id="setup-model-popup" tabindex="-1" role="dialog"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button (click)="closeSetupModelPopup()" type="button" class="close">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+          </button>
+          <h4 class="modal-title">Setup Model : {{modelTypeLables[selectedModelName]}}</h4>
+        </div>
+        <div class="modal-body">
+          <div class="ibox">
+            <div class="dixon-content">
+              <!-- TODO : Here We will have switch case according to model type -->
+              <ng-container *ngIf="selectedModelName == 'hourlyOnStreet' 
+                                  || selectedModelName == 'hourlyOffStreet'
+                                  || selectedModelName == 'hourlyGarages'">
+                <app-hourly-model [modelName]="selectedModelName" [financialDashboard]="financialDashboard"
+                  (onChildAction)="onChildAction($event)" [onParentCommand]="onParentCommand"></app-hourly-model>
+              </ng-container>
+
+              <ng-container *ngIf="selectedModelName == 'timeOfDayOnStreet' 
+              || selectedModelName == 'timeOfDayOffStreet'
+              || selectedModelName == 'timeOfDayGarages'">
+                <app-timeofday-model [modelName]="selectedModelName" [financialDashboard]="financialDashboard"
+                  (onChildAction)="onChildAction($event)" [onParentCommand]="onParentCommand"></app-timeofday-model>
+              </ng-container>
+
+              <ng-container *ngIf="selectedModelName == 'escalatingOnStreet' 
+              || selectedModelName == 'escalatingOffStreet'
+              || selectedModelName == 'escalatingGarages'">
+                <app-escalating-model [modelName]="selectedModelName" [financialDashboard]="financialDashboard"
+                  (onChildAction)="onChildAction($event)" [onParentCommand]="onParentCommand"></app-escalating-model>
+              </ng-container>
+
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="col-md-12 footer-wrapper">
+            <div class="left-buttons">
+
+            </div>
+            <div class="right-buttons">
+              <button [disabled]="isUpdating" (click)="onUpdateClientModel()" id="btn-create-model"
+                class="btn btn-primary btn-sm cursor-pointor" type="button">Update Model</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-container *ngTemplateOutlet="EquipmentCostModalTemplate"></ng-container>
+<ng-template #EquipmentCostModalTemplate>
+  <div *ngIf="isShowSetupEquipmentCostModal && financialDashboard" id="setup-equipment-cost-modal"
+    class="modal inmodal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button (click)="onCloseSetupEquipmentCostModal()" type="button" class="close">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+          </button>
+          <h4 class="modal-title">
+            Setup Equipment Cost - {{selectedParkingType.parkingTypeName}}
+          </h4>
+        </div>
+        <div class="modal-body">
+          <div class="ibox">
+            <div class="dixon-content">
+              <app-setup-equipment-cost (onChildAction)="onChildAction($event)" [onParentCommand]="onParentCommand"
+                [parkingClientModel]="parkingClientModel" [parkingTypeId]="selectedParkingType.parkingTypeId"
+                [financialDashboard]="financialDashboard">
+              </app-setup-equipment-cost>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="col-md-12 footer-wrapper">
+            <div class="left-buttons"> </div>
+            <div class="right-buttons">
+              <button (click)="onCloseSetupEquipmentCostModal()" id="btn-cancel-setup-cost" class="btn btn-white btn-sm"
+                type="button">Cancel</button>
+              <button
+                [disabled]="setupModelService.equipmentCostLoader[setupModelService.equipmentCostLoader.loaderProperty]"
+                (click)="onSaveSetupEquipmentCostModal()" id="btn-create-setup-cost" class="btn btn-primary btn-sm"
+                type="button">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #ManageZonesTemplate>
+  <div class="row mt-3 setup-card">
+    <div class="col-md-12 col-sm-12 text-center">
+      <label class="main-label">
+        <b>Zones/Permits</b>
+      </label>
+    </div>
+    <div class="col-md-12 col-sm-12">
+      <table class="table-centered table t
+      able-stripped toggle-arrow-tiny">
+        <thead>
+          <tr>
+            <th>Parking Type</th>
+            <th>Zones</th>
+            <th>Permits</th>
+            <th>
+              <ng-container
+                *ngIf="authService.loggedInUser.role == 'Admin' && isShowEditClient && financialDashboard != null">
+                <app-add-client-modal (onClientUpdated)="onClientUpdated($event)" [isEditClientModal]="true"
+                  [financialDashboard]="financialDashboard">
+                </app-add-client-modal>
+              </ng-container>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>On Street</td>
+            <td>{{parkingClientModel.onStreetZoneCount}}</td>
+            <td>{{parkingClientModel.onStreetPermitCount}}</td>
+            <td>
+              <button style="visibility: hidden;" class="btn btn-primary btn-sm">Manage</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Off Street</td>
+            <td>{{parkingClientModel.offStreetZoneCount}}</td>
+            <td>{{parkingClientModel.offStreetPermitCount}}</td>
+            <td>
+              <button style="visibility: hidden;" class="btn btn-primary btn-sm">Manage</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Garage</td>
+            <td>{{parkingClientModel.garagesZoneCount}}</td>
+            <td>{{parkingClientModel.garagesPermitCount}}</td>
+            <td>
+              <button style="visibility: hidden;" class="btn btn-primary btn-sm">Manage</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #ManageEquipmentCostTemplate>
+  <div class="row mt-3 setup-card">
+    <div class="col-md-12 col-sm-12 text-center">
+      <label class="main-label">
+        <b>Equipment Costs</b>
+      </label>
+    </div>
+    <div class="col-md-12 col-sm-12">
+      <table class="table-centered table table-stripped toggle-arrow-tiny">
+        <thead>
+          <tr>
+            <th>Parking Type</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let parkingType of parkingTypes;">
+            <td>{{parkingType.parkingTypeName}}</td>
+            <td>
+              <button *ngIf="parkingType.isAvailable" (click)="onSetupEquipmentCost(parkingType)"
+                class="btn btn-primary btn-sm">Edit</button>
+              <button *ngIf="!parkingType.isAvailable" disabled class="btn btn-primary btn-sm">Edit</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #ManageClientModelTemplate>
+  <div *ngIf="!isShowLoader" id="manage-client-card" class="row mt-3 setup-card">
+    <table id="tbl-client-models" class="table table-stripped toggle-arrow-tiny">
+      <thead>
+        <tr class="header-row">
+          <th class="column-title">Rates</th>
+          <th> On-Street </th>
+          <th> Off-Street </th>
+          <th> Garage </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-title"> Hourly </td>
+          <td>
+            <ng-container *ngTemplateOutlet="IconTemplate; context:{property:'hourlyOnStreet'}"> </ng-container>
+          </td>
+          <td>
+            <ng-container *ngTemplateOutlet="IconTemplate; context:{property:'hourlyOffStreet'}"> </ng-container>
+          </td>
+          <td>
+            <ng-container *ngTemplateOutlet="IconTemplate; context:{property:'hourlyGarages'}"> </ng-container>
+          </td>
+        </tr>
+        <tr>
+          <td class="row-title"> Time Of The Day </td>
+          <td>
+            <ng-container *ngTemplateOutlet="IconTemplate; context:{property:'timeOfDayOnStreet'}"> </ng-container>
+          </td>
+          <td>
+            <ng-container *ngTemplateOutlet="IconTemplate; context:{property:'timeOfDayOffStreet'}"> </ng-container>
+          </td>
+          <td>
+            <ng-container *ngTemplateOutlet="IconTemplate; context:{property:'timeOfDayGarages'}"> </ng-container>
+          </td>
+        </tr>
+        <tr>
+          <td class="row-title"> Escalating </td>
+          <td>
+            <ng-container *ngTemplateOutlet="IconTemplate; context:{property:'escalatingOnStreet'}"> </ng-container>
+          </td>
+          <td>
+            <ng-container *ngTemplateOutlet="IconTemplate; context:{property:'escalatingOffStreet'}"> </ng-container>
+          </td>
+          <td>
+            <ng-container *ngTemplateOutlet="IconTemplate; context:{property:'escalatingGarages'}"> </ng-container>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</ng-template>
+
+<ng-template #IconTemplate let-property="property">
+  <span (click)="onUpdateModelAvailability(financialDashboard[property])"
+    [ngClass]="{'checked': financialDashboard[property].isAvailable}" class="dixon-checkbox no-padding"></span>
+  <button [disabled]="!financialDashboard[property].isAvailable" (click)="onShowSetupClientModel(property)"
+    class="btn btn-primary btn-sm">
+    Edit
+  </button>
+  <i *ngIf="financialDashboard[property].isSetupDone" [attr.info]="setupDoneMsg"
+    class="fa fa-check dixon-tooltip no-color"></i>
+  <i *ngIf="!financialDashboard[property].isSetupDone" [attr.info]="setupPendingMsg"
+    class="fa fa-question-circle dixon-tooltip no-color"></i>
+</ng-template>

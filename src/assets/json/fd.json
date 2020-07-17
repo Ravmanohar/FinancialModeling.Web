@@ -1,0 +1,1726 @@
+{
+    "hourlyRevenueModel": {
+        "onStreet": {
+            "1": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 128115,
+                        "cost": 81435,
+                        "gain": 46680
+                    },
+                    "peak": {
+                        "revenue": 98280,
+                        "cost": 81435,
+                        "gain": 16845
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 98550,
+                        "cost": 81435,
+                        "gain": 17115
+                    },
+                    "peak": {
+                        "revenue": 76950,
+                        "cost": 81435,
+                        "gain": -4485
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 226665,
+                        "cost": 162870,
+                        "gain": 63795
+                    },
+                    "peak": {
+                        "revenue": 175230,
+                        "cost": 162870,
+                        "gain": 12360
+                    }
+                }
+            ],
+            "2": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 256230,
+                        "cost": 117870,
+                        "gain": 138360
+                    },
+                    "peak": {
+                        "revenue": 196560,
+                        "cost": 117870,
+                        "gain": 78690
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 197100,
+                        "cost": 117870,
+                        "gain": 79230
+                    },
+                    "peak": {
+                        "revenue": 153900,
+                        "cost": 117870,
+                        "gain": 36030
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 453330,
+                        "cost": 235740,
+                        "gain": 217590
+                    },
+                    "peak": {
+                        "revenue": 350460,
+                        "cost": 235740,
+                        "gain": 114720
+                    }
+                }
+            ],
+            "3": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 384345,
+                        "cost": 154305,
+                        "gain": 230040
+                    },
+                    "peak": {
+                        "revenue": 294840,
+                        "cost": 154305,
+                        "gain": 140535
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 295650,
+                        "cost": 154305,
+                        "gain": 141345
+                    },
+                    "peak": {
+                        "revenue": 230850,
+                        "cost": 154305,
+                        "gain": 76545
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 679995,
+                        "cost": 308610,
+                        "gain": 371385
+                    },
+                    "peak": {
+                        "revenue": 525690,
+                        "cost": 308610,
+                        "gain": 217080
+                    }
+                }
+            ],
+            "4": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 512460,
+                        "cost": 190740,
+                        "gain": 321720
+                    },
+                    "peak": {
+                        "revenue": 393120,
+                        "cost": 190740,
+                        "gain": 202380
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 394200,
+                        "cost": 190740,
+                        "gain": 203460
+                    },
+                    "peak": {
+                        "revenue": 307800,
+                        "cost": 190740,
+                        "gain": 117060
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 906660,
+                        "cost": 381480,
+                        "gain": 525180
+                    },
+                    "peak": {
+                        "revenue": 700920,
+                        "cost": 381480,
+                        "gain": 319440
+                    }
+                }
+            ],
+            "5": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 640575,
+                        "cost": 227175,
+                        "gain": 413400
+                    },
+                    "peak": {
+                        "revenue": 491400,
+                        "cost": 227175,
+                        "gain": 264225
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 492750,
+                        "cost": 227175,
+                        "gain": 265575
+                    },
+                    "peak": {
+                        "revenue": 384750,
+                        "cost": 227175,
+                        "gain": 157575
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 1133325,
+                        "cost": 454350,
+                        "gain": 678975
+                    },
+                    "peak": {
+                        "revenue": 876150,
+                        "cost": 454350,
+                        "gain": 421800
+                    }
+                }
+            ]
+        },
+        "offStreet": {
+            "1": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                }
+            ],
+            "2": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                }
+            ],
+            "3": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                }
+            ],
+            "4": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                }
+            ],
+            "5": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                }
+            ]
+        },
+        "garages": {
+            "1": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                }
+            ],
+            "2": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                }
+            ],
+            "3": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                }
+            ],
+            "4": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                }
+            ],
+            "5": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                }
+            ]
+        }
+    },
+    "timeOfDayRevenueModel": {
+        "onStreet": {
+            "1": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 81435,
+                        "gain": -81435
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 81435,
+                        "gain": -81435
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 81435,
+                        "gain": -81435
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 81435,
+                        "gain": -81435
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 162870,
+                        "gain": -162870
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 162870,
+                        "gain": -162870
+                    }
+                }
+            ],
+            "2": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 117870,
+                        "gain": -117870
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 117870,
+                        "gain": -117870
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 117870,
+                        "gain": -117870
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 117870,
+                        "gain": -117870
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 235740,
+                        "gain": -235740
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 235740,
+                        "gain": -235740
+                    }
+                }
+            ],
+            "3": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 154305,
+                        "gain": -154305
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 154305,
+                        "gain": -154305
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 154305,
+                        "gain": -154305
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 154305,
+                        "gain": -154305
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 308610,
+                        "gain": -308610
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 308610,
+                        "gain": -308610
+                    }
+                }
+            ],
+            "4": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 190740,
+                        "gain": -190740
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 190740,
+                        "gain": -190740
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 190740,
+                        "gain": -190740
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 190740,
+                        "gain": -190740
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 381480,
+                        "gain": -381480
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 381480,
+                        "gain": -381480
+                    }
+                }
+            ],
+            "5": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 227175,
+                        "gain": -227175
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 227175,
+                        "gain": -227175
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 227175,
+                        "gain": -227175
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 227175,
+                        "gain": -227175
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 454350,
+                        "gain": -454350
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 454350,
+                        "gain": -454350
+                    }
+                }
+            ]
+        },
+        "offStreet": {
+            "1": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                }
+            ],
+            "2": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                }
+            ],
+            "3": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                }
+            ],
+            "4": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                }
+            ],
+            "5": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                }
+            ]
+        },
+        "garages": {
+            "1": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                }
+            ],
+            "2": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                }
+            ],
+            "3": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                }
+            ],
+            "4": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                }
+            ],
+            "5": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    },
+                    "peak": {
+                        "revenue": 0,
+                        "cost": 0,
+                        "gain": 0
+                    }
+                }
+            ]
+        }
+    },
+    "escalatingRevenueModel": {
+        "onStreet": {
+            "1": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 467474,
+                        "cost": 81435,
+                        "gain": 386039
+                    },
+                    "peak": {
+                        "revenue": 358610,
+                        "cost": 81435,
+                        "gain": 277175
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 389562,
+                        "cost": 81435,
+                        "gain": 308127
+                    },
+                    "peak": {
+                        "revenue": 298842,
+                        "cost": 81435,
+                        "gain": 217407
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 857036,
+                        "cost": 162870,
+                        "gain": 694166
+                    },
+                    "peak": {
+                        "revenue": 657452,
+                        "cost": 162870,
+                        "gain": 494582
+                    }
+                }
+            ],
+            "2": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 934948,
+                        "cost": 117870,
+                        "gain": 817078
+                    },
+                    "peak": {
+                        "revenue": 717220,
+                        "cost": 117870,
+                        "gain": 599350
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 779124,
+                        "cost": 117870,
+                        "gain": 661254
+                    },
+                    "peak": {
+                        "revenue": 597684,
+                        "cost": 117870,
+                        "gain": 479814
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 1714072,
+                        "cost": 235740,
+                        "gain": 1478332
+                    },
+                    "peak": {
+                        "revenue": 1314904,
+                        "cost": 235740,
+                        "gain": 1079164
+                    }
+                }
+            ],
+            "3": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 1402422,
+                        "cost": 154305,
+                        "gain": 1248117
+                    },
+                    "peak": {
+                        "revenue": 1075830,
+                        "cost": 154305,
+                        "gain": 921525
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 1168686,
+                        "cost": 154305,
+                        "gain": 1014381
+                    },
+                    "peak": {
+                        "revenue": 896526,
+                        "cost": 154305,
+                        "gain": 742221
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 2571108,
+                        "cost": 308610,
+                        "gain": 2262498
+                    },
+                    "peak": {
+                        "revenue": 1972356,
+                        "cost": 308610,
+                        "gain": 1663746
+                    }
+                }
+            ],
+            "4": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 1869896,
+                        "cost": 190740,
+                        "gain": 1679156
+                    },
+                    "peak": {
+                        "revenue": 1434440,
+                        "cost": 190740,
+                        "gain": 1243700
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 1558248,
+                        "cost": 190740,
+                        "gain": 1367508
+                    },
+                    "peak": {
+                        "revenue": 1195368,
+                        "cost": 190740,
+                        "gain": 1004628
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 3428144,
+                        "cost": 381480,
+                        "gain": 3046664
+                    },
+                    "peak": {
+                        "revenue": 2629808,
+                        "cost": 381480,
+                        "gain": 2248328
+                    }
+                }
+            ],
+            "5": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 2337370,
+                        "cost": 227175,
+                        "gain": 2110195
+                    },
+                    "peak": {
+                        "revenue": 1793050,
+                        "cost": 227175,
+                        "gain": 1565875
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 1947810,
+                        "cost": 227175,
+                        "gain": 1720635
+                    },
+                    "peak": {
+                        "revenue": 1494210,
+                        "cost": 227175,
+                        "gain": 1267035
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 4285180,
+                        "cost": 454350,
+                        "gain": 3830830
+                    },
+                    "peak": {
+                        "revenue": 3287260,
+                        "cost": 454350,
+                        "gain": 2832910
+                    }
+                }
+            ]
+        },
+        "offStreet": {
+            "1": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 28111,
+                        "cost": 0,
+                        "gain": 28111
+                    },
+                    "peak": {
+                        "revenue": 27340,
+                        "cost": 0,
+                        "gain": 27340
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 22488,
+                        "cost": 0,
+                        "gain": 22488
+                    },
+                    "peak": {
+                        "revenue": 21872,
+                        "cost": 0,
+                        "gain": 21872
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 50599,
+                        "cost": 0,
+                        "gain": 50599
+                    },
+                    "peak": {
+                        "revenue": 49212,
+                        "cost": 0,
+                        "gain": 49212
+                    }
+                }
+            ],
+            "2": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 56222,
+                        "cost": 0,
+                        "gain": 56222
+                    },
+                    "peak": {
+                        "revenue": 54680,
+                        "cost": 0,
+                        "gain": 54680
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 44976,
+                        "cost": 0,
+                        "gain": 44976
+                    },
+                    "peak": {
+                        "revenue": 43744,
+                        "cost": 0,
+                        "gain": 43744
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 101198,
+                        "cost": 0,
+                        "gain": 101198
+                    },
+                    "peak": {
+                        "revenue": 98424,
+                        "cost": 0,
+                        "gain": 98424
+                    }
+                }
+            ],
+            "3": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 84333,
+                        "cost": 0,
+                        "gain": 84333
+                    },
+                    "peak": {
+                        "revenue": 82020,
+                        "cost": 0,
+                        "gain": 82020
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 67464,
+                        "cost": 0,
+                        "gain": 67464
+                    },
+                    "peak": {
+                        "revenue": 65616,
+                        "cost": 0,
+                        "gain": 65616
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 151797,
+                        "cost": 0,
+                        "gain": 151797
+                    },
+                    "peak": {
+                        "revenue": 147636,
+                        "cost": 0,
+                        "gain": 147636
+                    }
+                }
+            ],
+            "4": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 112444,
+                        "cost": 0,
+                        "gain": 112444
+                    },
+                    "peak": {
+                        "revenue": 109360,
+                        "cost": 0,
+                        "gain": 109360
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 89952,
+                        "cost": 0,
+                        "gain": 89952
+                    },
+                    "peak": {
+                        "revenue": 87488,
+                        "cost": 0,
+                        "gain": 87488
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 202396,
+                        "cost": 0,
+                        "gain": 202396
+                    },
+                    "peak": {
+                        "revenue": 196848,
+                        "cost": 0,
+                        "gain": 196848
+                    }
+                }
+            ],
+            "5": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 140555,
+                        "cost": 0,
+                        "gain": 140555
+                    },
+                    "peak": {
+                        "revenue": 136700,
+                        "cost": 0,
+                        "gain": 136700
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 112440,
+                        "cost": 0,
+                        "gain": 112440
+                    },
+                    "peak": {
+                        "revenue": 109360,
+                        "cost": 0,
+                        "gain": 109360
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 252995,
+                        "cost": 0,
+                        "gain": 252995
+                    },
+                    "peak": {
+                        "revenue": 246060,
+                        "cost": 0,
+                        "gain": 246060
+                    }
+                }
+            ]
+        },
+        "garages": {
+            "1": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 22488,
+                        "cost": 0,
+                        "gain": 22488
+                    },
+                    "peak": {
+                        "revenue": 21872,
+                        "cost": 0,
+                        "gain": 21872
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 22488,
+                        "cost": 0,
+                        "gain": 22488
+                    },
+                    "peak": {
+                        "revenue": 21872,
+                        "cost": 0,
+                        "gain": 21872
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 44976,
+                        "cost": 0,
+                        "gain": 44976
+                    },
+                    "peak": {
+                        "revenue": 43744,
+                        "cost": 0,
+                        "gain": 43744
+                    }
+                }
+            ],
+            "2": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 44976,
+                        "cost": 0,
+                        "gain": 44976
+                    },
+                    "peak": {
+                        "revenue": 43744,
+                        "cost": 0,
+                        "gain": 43744
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 44976,
+                        "cost": 0,
+                        "gain": 44976
+                    },
+                    "peak": {
+                        "revenue": 43744,
+                        "cost": 0,
+                        "gain": 43744
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 89952,
+                        "cost": 0,
+                        "gain": 89952
+                    },
+                    "peak": {
+                        "revenue": 87488,
+                        "cost": 0,
+                        "gain": 87488
+                    }
+                }
+            ],
+            "3": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 67464,
+                        "cost": 0,
+                        "gain": 67464
+                    },
+                    "peak": {
+                        "revenue": 65616,
+                        "cost": 0,
+                        "gain": 65616
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 67464,
+                        "cost": 0,
+                        "gain": 67464
+                    },
+                    "peak": {
+                        "revenue": 65616,
+                        "cost": 0,
+                        "gain": 65616
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 134928,
+                        "cost": 0,
+                        "gain": 134928
+                    },
+                    "peak": {
+                        "revenue": 131232,
+                        "cost": 0,
+                        "gain": 131232
+                    }
+                }
+            ],
+            "4": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 89952,
+                        "cost": 0,
+                        "gain": 89952
+                    },
+                    "peak": {
+                        "revenue": 87488,
+                        "cost": 0,
+                        "gain": 87488
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 89952,
+                        "cost": 0,
+                        "gain": 89952
+                    },
+                    "peak": {
+                        "revenue": 87488,
+                        "cost": 0,
+                        "gain": 87488
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 179904,
+                        "cost": 0,
+                        "gain": 179904
+                    },
+                    "peak": {
+                        "revenue": 174976,
+                        "cost": 0,
+                        "gain": 174976
+                    }
+                }
+            ],
+            "5": [
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 1",
+                    "nonPeak": {
+                        "revenue": 112440,
+                        "cost": 0,
+                        "gain": 112440
+                    },
+                    "peak": {
+                        "revenue": 109360,
+                        "cost": 0,
+                        "gain": 109360
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Zone 2",
+                    "nonPeak": {
+                        "revenue": 112440,
+                        "cost": 0,
+                        "gain": 112440
+                    },
+                    "peak": {
+                        "revenue": 109360,
+                        "cost": 0,
+                        "gain": 109360
+                    }
+                },
+                {
+                    "zoneId": 0,
+                    "zoneName": "Total",
+                    "nonPeak": {
+                        "revenue": 224880,
+                        "cost": 0,
+                        "gain": 224880
+                    },
+                    "peak": {
+                        "revenue": 218720,
+                        "cost": 0,
+                        "gain": 218720
+                    }
+                }
+            ]
+        }
+    }
+}

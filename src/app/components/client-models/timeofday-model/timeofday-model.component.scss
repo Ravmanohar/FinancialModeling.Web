@@ -1,0 +1,26 @@
+.wrapper-content {
+  padding: 5px 10px;
+  .filter-buttons {
+    display: flex;
+    justify-content: flex-end;
+    button {
+      &:last-of-type {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+.wizard-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.time-slot-container {
+  input,
+  select {
+    width: 50%;
+    float: left;
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "clientId": 1,
+    "clientName": "California",
+    "createdById": 0,
+    "numberOfUsers": 0,
+    "onStreetZoneCount": 2,
+    "offStreetZoneCount": 2,
+    "garagesZoneCount": 2,
+    "onStreetPermitCount": 2,
+    "offStreetPermitCount": 2,
+    "garagesPermitCount": 2
+  },
+  {
+    "clientId": 2,
+    "clientName": "Texas",
+    "createdById": 0,
+    "numberOfUsers": 0,
+    "onStreetZoneCount": 2,
+    "offStreetZoneCount": 2,
+    "garagesZoneCount": 2,
+    "onStreetPermitCount": 3,
+    "offStreetPermitCount": 3,
+    "garagesPermitCount": 3
+  }
+]

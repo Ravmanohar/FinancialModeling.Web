@@ -1,0 +1,33 @@
+<div id="login-card" class="ibox-content middle-box text-center loginscreen animated fadeInDown">
+    <card-loader></card-loader>
+    <div>
+        <div class="logo-container">
+            <img src="/assets/img/dixon-logo.png" />
+        </div>
+        <h3>Welcome to Financial Modeling</h3>
+        <form class="m-t" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <input formControlName="email" type="email" class="form-control" placeholder="Username" required="">
+            </div>
+            <div class="form-group">
+                <input formControlName="password" type="password" class="form-control" placeholder="Password"
+                    required="">
+            </div>
+            <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
+            <!-- <a>
+                <small>Forgot password?</small>
+            </a> -->
+            <!-- <p class="text-muted text-center">
+                <small>Do not have an account?</small>
+            </p> -->
+            <!-- <a (click)="goToRegisterAccount()" class="btn btn-sm btn-white btn-block">Create an account</a> -->
+        </form>
+        <!-- <p class="m-t">
+            <small>Inspinia we app framework base on Bootstrap 3 &copy; 2014</small>
+        </p> -->
+    </div>
+</div>
+
+<div class="footer-container">
+    Copyright © Dixon Resources Unlimited | All Rights Reserved.
+</div>

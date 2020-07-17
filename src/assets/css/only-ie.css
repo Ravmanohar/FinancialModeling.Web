@@ -1,0 +1,9 @@
+:-ms-lang(x),
+.modal-backdrop {
+  z-index: -1 !important;
+}
+
+:-ms-lang(x),
+#wrapper .navbar-default.navbar-static-side {
+  z-index: 0 !important;
+}

@@ -1,0 +1,70 @@
+<app-loader *ngIf="isShowLoader"></app-loader>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+    <div class="col-md-12">
+      <button (click)="onViewClientDashboard()" type="button" class="btn btn-primary btn-sm">
+        View Dashboard
+      </button>
+    </div>
+    <div class="col-lg-12">
+      <table class="table table-stripped toggle-arrow-tiny">
+        <thead>
+          <tr>
+            <th>Projection Name</th>
+            <th>Created Date</th>
+            <!-- <th>Status</th> -->
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="no-records-found" *ngIf="projectionsList.length == 0">
+            <td colspan="4">
+              {{isShowLoader ? 'Loading Records...' : 'No Records Found'}}
+            </td>
+          </tr>
+          <tr *ngFor="let projection of projectionsList">
+            <td>{{projection.projectionName}}</td>
+            <td>{{projection.createdDateUtc | date:'MMM dd, y, hh:mm:ss a'}}</td>
+            <td class="actions-td">
+              <span class="action-buttons">
+                <i (click)="onViewProjectionDashboard(projection)" class="btn-view-client fa fa-eye"></i>
+                <i (click)="onEditProjection(projection)" class="btn-view-client fa fa-pencil"></i>
+                <i (click)="onDeleteProjection(projection)" class="btn-view-client fa fa-trash"></i>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal" id="update-projection-name-popup" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content animated">
+      <div class="modal-header">
+
+        <h4 class="modal-title">Update Projection Name</h4>
+
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Close</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group col-md-12">
+          <label class="col-form-label">Projection Name:</label>
+          <input [(ngModel)]="projectionName" type="text" class="form-control"
+            placeholder="Projection Name" />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button [disabled]="isShowLoader" (click)="onUpdateProjection()" type="button" class="btn btn-primary btn-sm">
+          Save
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,264 @@
+<app-loader *ngIf="isShowLoader"></app-loader>
+
+<div class="col-sm-12 setup-wizard">
+  <!-- Wizard Header -->
+  <div class="col-sm-12 wizard-header">
+    <h4 (click)="onToggleWizardContent($event)" class="wizard-title">Zone Name : {{selectedZone.zoneName}}</h4>
+  </div>
+
+  <div id="hourly-wizard-content" class="wizard-content">
+    <!-- Wizard Body -->
+    <div class="col-sm-12 wizard-body">
+      <div class="wizard-page">
+        <div class="row">
+
+          <div class="dixon-card form-group col-md-4 col-sm-12">
+            <label class="main-label">Hourly Rate:</label>
+            <div class="form-group row">
+              <label class="col-sm-4 col-form-label">Non Peak Season:</label>
+              <div class="col-sm-4">
+                <input [(ngModel)]="selectedZone.nonPeakSeasonHourlyRate" type="number" min="0" max="20" step="0.25"
+                  class="form-control rate" placeholder="Hourly Rate" />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-4 col-form-label">Peak Season:</label>
+              <div class="col-sm-4">
+                <input [disabled]="disablePeak" [(ngModel)]="selectedZone.peakSeasonHourlyRate" type="number" min="0"
+                  max="20" step="0.25" class="form-control rate" placeholder="Hourly Rate" />
+              </div>
+            </div>
+          </div>
+
+          <div class="dixon-card form-group col-md-4 col-sm-12">
+            <label class="main-label">Spaces:</label>
+            <div class="form-group row">
+              <label class="col-sm-4 col-form-label">Total:</label>
+              <div class="col-sm-4">
+                <input (change)="onSpaceChange($event)" [(ngModel)]="selectedZone.numberOfSpacesPerZone" type="number"
+                  class="form-control" placeholder="Number Of Spaces">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-4 col-form-label">% Permit:</label>
+              <div class="col-sm-4">
+                <input [disabled]="!hasPermits" (change)="onSpaceChange($event)"
+                  [(ngModel)]="selectedZone.percentOfSpaceOccupied" min="0" max="100" type="number"
+                  class="form-control percent" placeholder="Percent Of Space Occupied">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-4 col-form-label">Remaining:</label>
+              <div class="col-sm-4">
+                <label class="col-sm-3 col-form-label">{{selectedZone.numberOfSpacesRemaining}}</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="dixon-card form-group col-md-4 col-sm-12">
+            <label class="main-label">Operating Hours:</label>
+            <div class="form-group row">
+              <label class="col-sm-4 col-form-label">Start Time:</label>
+              <div class="col-sm-5">
+                <select (change)="onTimeChange($event)" [(ngModel)]="selectedZone.hourlyOperatingHour.startTime"
+                  name="startTime" class="form-control">
+                  <option *ngIf="selectedZone.hourlyOperatingHour.startTime == ''" value="">Start Time</option>
+                  <option *ngFor="let timeSlot of lookupService.lookup.timeSlots" [value]="timeSlot">
+                    {{timeSlot}}</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-4 col-form-label">End Time:</label>
+              <div class="col-sm-5">
+                <select (change)="onTimeChange($event)" [(ngModel)]="selectedZone.hourlyOperatingHour.endTime"
+                  name="endTime" class="form-control">
+                  <option *ngIf="selectedZone.hourlyOperatingHour.endTime == ''" value="">End Time</option>
+                  <option *ngFor="let timeSlot of lookupService.lookup.timeSlots" [value]="timeSlot">
+                    {{timeSlot}}</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-4 col-form-label">Total:</label>
+              <div class="col-sm-4">
+                <label class="col-sm-4 col-form-label">{{selectedZone.hourlyOperatingHour.totalHours}}</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="dixon-card form-group col-md-4 col-sm-12">
+            <label class="main-label">Days Per Year:</label>
+            <div class="form-group row">
+              <label class="col-sm-4 col-form-label">Peak Days:</label>
+              <div class="col-sm-4">
+                <input disabled [(ngModel)]="selectedZone.operatingDays.peakDays" type="number" class="form-control"
+                  placeholder="Peak Days" />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-4 col-form-label">Non Peak Days:</label>
+              <div class="col-sm-4">
+                <input (change)="onDayChange($event, 'NonPeakDays')"
+                  [(ngModel)]="selectedZone.operatingDays.nonPeakDays" type="number" class="form-control"
+                  placeholder="Non Peak Days" />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-4 col-form-label">Off Days:</label>
+              <div class="col-sm-4">
+                <input (change)="onDayChange($event, 'OffDays')" [(ngModel)]="selectedZone.operatingDays.offDays"
+                  type="number" class="form-control" placeholder="Off Days" />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-4 col-form-label">Annual:</label>
+              <div class="col-sm-4">
+                <label class="col-sm-4 col-form-label">{{selectedZone.operatingDays.daysPerYear}}</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="dixon-card form-group col-md-4 col-sm-12">
+            <label class="main-label">Occupancy Percentage:</label>
+            <div class="form-group row">
+              <label class="col-sm-4 col-form-label">Non Peak Season:</label>
+              <div class="col-sm-4">
+                <input [(ngModel)]="selectedZone.nonPeakOccupancyPercentage" type="number" min=0 max="100"
+                  class="form-control percent" placeholder="Occupancy Percentage">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-4 col-form-label">Peak Season:</label>
+              <div class="col-sm-4">
+                <input [disabled]="disablePeak" [(ngModel)]="selectedZone.peakOccupancyPercentage" type="number" min=0
+                  max="100" class="form-control percent" placeholder="Occupancy Percentage">
+              </div>
+            </div>
+          </div>
+
+          <div class="dixon-card form-group col-md-4 col-sm-12">
+            <label class="main-label">Compliance Percentage:</label>
+            <div class="form-group row">
+              <label class="col-sm-4 col-form-label">Percentage:</label>
+              <div class="col-sm-4">
+                <input [(ngModel)]="selectedZone.compliancePercentage" type="number" min=0 max="100"
+                  class="form-control percent" placeholder="Compliance Percentage" />
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="hasPermits" class="dixon-card form-group col-md-12 col-sm-12">
+            <label class="main-label">Permits:</label>
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Permit Name</label>
+              <label class="col-sm-2 col-form-label">Annual Cost</label>
+              <label class="col-sm-2 col-form-label">Quantity Sold</label>
+            </div>
+
+            <ng-container *ngFor="let permit of selectedZone.clientPermitTypes">
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label">{{permit.permitName}}:</label>
+                <div class="col-sm-2">
+                  <input [(ngModel)]="permit.annualCost" type="number" class="form-control" placeholder="Annual Cost" />
+                </div>
+                <div class="col-sm-2">
+                  <input [(ngModel)]="permit.quantitySold" type="number" class="form-control"
+                    placeholder="Quantity Sold" />
+                </div>
+              </div>
+            </ng-container>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Wizard Footer -->
+    <div class="col-sm-12 wizard-footer">
+      <div class="left-buttons">
+        <ng-container *ngIf="calculateYearlyRevenue">
+          <button (click)="onApply()" type="button" class="btn btn-primary btn-sm"> Apply </button>
+          <!-- <button (click)="onSaveAsModel()" type="button" class="btn btn-primary btn-sm"> Save As Model </button> -->
+        </ng-container>
+      </div>
+      <div class="right-buttons">
+        <button *ngIf="selectedPage > 1" (click)="onPrevious()" type="button" class="btn btn-primary btn-sm">
+          Previous
+        </button>
+        <button *ngIf="selectedPage < lastPageNumber" (click)="onNext()" type="button" class="btn btn-primary btn-sm">
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div *ngIf="calculateYearlyRevenue" class="yearly-revenue-container col-sm-12">
+  <table class="ps-table">
+    <thead>
+      <tr class="header-tr">
+        <td [attr.colspan]="((projectedRevenueSummary.zoneSummaryList.length * 3) + 4)">
+          PROJECTED REVENUE SUMMARY - HOURLY RATE MODEL
+        </td>
+      </tr>
+      <tr>
+        <th class="side-header"> </th>
+        <ng-container *ngFor="let zoneSummary of projectedRevenueSummary.zoneSummaryList">
+          <th colspan="3">{{zoneSummary.zoneName}}</th>
+        </ng-container>
+      </tr>
+      <tr>
+        <th class="side-header"> </th>
+        <ng-container *ngFor="let zoneSummary of projectedRevenueSummary.zoneSummaryList">
+          <th>Hourly</th>
+          <th>Permit</th>
+          <th>Total</th>
+        </ng-container>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let year of financialDashboardService.calcuateForYears;">
+        <tr>
+          <td *ngIf="year == 1" class="side-header"> Revenue Without Peak Season - Year {{year}} </td>
+          <td *ngIf="year > 1" class="side-header">
+            Revenue Without Peak Season - Years 1 - {{year}}
+          </td>
+          <ng-container *ngFor="let zoneSummary of projectedRevenueSummary.zoneSummaryList">
+            <ng-container *ngFor="let column of financialDashboardService.hourlyRevenueColumns;">
+              <td>{{(zoneSummary.nonPeak[column] * year) | currency}}</td>
+            </ng-container>
+          </ng-container>
+        </tr>
+        <ng-container *ngIf="isPeakSeasonPricing">
+          <tr>
+            <td *ngIf="year == 1" class="side-header"> Revenue With Peak Season - Year {{year}} </td>
+            <td *ngIf="year > 1" class="side-header">
+              Revenue With Peak Season - Years 1 - {{year}}
+            </td>
+            <ng-container *ngFor="let zoneSummary of projectedRevenueSummary.zoneSummaryList">
+              <ng-container *ngFor="let column of financialDashboardService.hourlyRevenueColumns;">
+                <td>{{(zoneSummary.peak[column] * year) | currency}}</td>
+              </ng-container>
+            </ng-container>
+          </tr>
+          <tr>
+            <td class="side-header"> Variance </td>
+            <ng-container *ngFor="let zoneSummary of projectedRevenueSummary.zoneSummaryList">
+              <ng-container *ngFor="let column of financialDashboardService.hourlyRevenueColumns;">
+                <td>{{(zoneSummary.variance[column] * year) | currency}}</td>
+              </ng-container>
+            </ng-container>
+          </tr>
+        </ng-container>
+        <tr>
+          <td [attr.colspan]="((projectedRevenueSummary.zoneSummaryList.length * 3) + 4)"></td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>

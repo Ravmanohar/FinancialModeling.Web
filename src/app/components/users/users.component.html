@@ -1,0 +1,110 @@
+<app-loader *ngIf="isShowLoader"></app-loader>
+
+<!-- Start : Add User Modal-->
+<div class="col-md-12">
+  <button (click)="showAddUserModal()" class="btn btn-primary btn-sm">
+    Add User
+  </button>
+  <div class="modal" id="add-user-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content animated fadeIn">
+        <div class="modal-header">
+          <h4 class="modal-title">Add User</h4>
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <app-register (onUserAdded)="onUserAdded()" [clientId]="clientId"></app-register>
+        </div>
+        <div class="modal-footer"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End : Add User Modal-->
+
+<!-- Start : User List Table -->
+<div class="col-lg-12">
+  <table class="table table-stripped toggle-arrow-tiny">
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>Role</th>
+        <th>IsActive</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{user.username}}</td>
+        <th>User</th>
+        <td>{{user.isActive ? 'Yes' : 'No'}}</td>
+        <td>
+          <button (click)="onShowResetPasswordModal(user)" class="btn btn-primary btn-sm">
+            Reset Password
+          </button>
+          <button *ngIf="user.isActive" [disabled]="isShowLoader" (click)="onUserStatusChange(user)"
+            class="btn btn-primary btn-sm">
+            Deactivate
+          </button>
+          <button *ngIf="!user.isActive" [disabled]="isShowLoader" (click)="onUserStatusChange(user)"
+            class="btn btn-primary btn-sm">
+            Activate
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- End : User List Table -->
+
+<!-- Start : Reset Password Modal-->
+<div class="col-md-12">
+  <div class="modal" id="reset-password-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content animated fadeIn">
+        <div class="modal-header">
+          <h4 class="modal-title">Reset Password</h4>
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <app-reset-password [userId]="selectedUserId"></app-reset-password>
+        </div>
+        <div class="modal-footer"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End : Add User Modal-->
+
+<!-- Start : Edit User Modal-->
+<!-- <div class="col-md-12">
+  <div class="modal" id="edit-user-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content animated fadeIn">
+        <div class="modal-header">
+          <h4 class="modal-title">Edit User</h4>
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Edit User HMLT Here
+          <br>
+          <pre>{{editedUser | json}}</pre>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-white btn-sm" data-dismiss="modal">Cancel</button>
+          <button [ngClass]="{'disabled': isSaving}" type="button" class="btn btn-primary btn-sm">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- End : Edit User Modal-->

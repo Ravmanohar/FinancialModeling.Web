@@ -1,0 +1,585 @@
+<style>
+    .ps-table td[type="rate"] input,
+    .ps-table td[type="percent"] input,
+    .ps-table td[type="textbox"] input,
+    .ps-table td[type="time"] input,
+    .ps-table td[type="number"] input,
+    .ps-table th[type="rate"] input,
+    .ps-table th[type="percent"] input,
+    .ps-table th[type="textbox"] input,
+    .ps-table th[type="time"] input,
+    .ps-table th[type="number"] input {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        outline: none;
+        border: none;
+        height: 100%;
+        background-color: #deeaf6;
+        color: #000;
+        text-align: center;
+    }
+
+    .ps-table td[type="rate"],
+    .ps-table td[type="percent"],
+    .ps-table td[type="textbox"],
+    .ps-table td[type="time"],
+    .ps-table td[type="number"],
+    .ps-table th[type="rate"],
+    .ps-table th[type="percent"],
+    .ps-table th[type="textbox"],
+    .ps-table th[type="time"],
+    .ps-table th[type="number"] {
+        background-color: #deeaf6;
+        color: #000;
+        cursor: pointer;
+    }
+
+    .ps-table td,
+    .ps-table th {
+        border-top-width: 0;
+        border-left-width: 0;
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        height: 22px;
+        empty-cells: show;
+        line-height: 21px;
+        padding: 0 4px;
+        background-color: #fff;
+        vertical-align: top;
+        overflow: hidden;
+        outline-width: 0;
+        background-clip: padding-box;
+        text-align: center;
+        vertical-align: middle;
+        white-space: nowrap;
+    }
+
+    .ps-table {
+        width: 100%;
+        border: 1px solid #ccc;
+    }
+</style>
+
+<table class="ps-table" cellspacing="0" cellpadding="0">
+    <thead>
+    </thead>
+    <tbody>
+        <tr style='height:18px;'>
+            <td colspan="7">TIME OF DAY RATE REVENUE PROJECTIONS</td>
+        </tr>
+        <tr style='height:23px;'>
+            <td></td>
+            <td colspan="3">Zone 1</td>
+            <td colspan="3">Zone 2</td>
+
+        </tr>
+        <tr style='height:21px;'>
+            <td>Rate Per Hour: 8am-12pm - (Non Peak)</td>
+            <td colspan="3">$0.50</td>
+            <td colspan="3">$0.50</td>
+        </tr>
+        <tr style='height:21px;'>
+            <td>Rate Per Hour: 12pm-6pm - (Non Peak)</td>
+            <td colspan="3">$1.00</td>
+            <td colspan="3">$1.00</td>
+        </tr>
+        <tr style='height:21px;'>
+            <td>Rate Per Hour: 6pm-11pm - (Non Peak)</td>
+            <td colspan="3">$1.50</td>
+            <td colspan="3">$1.50</td>
+
+        </tr>
+        <tr style='height:11px;'>
+            <td colspan="7"></td>
+
+        </tr>
+        <tr style='height:21px;'>
+            <td>Rate Per Hour: 8am-12pm - (Peak)</td>
+            <td colspan="3">$1.00</td>
+            <td colspan="3">$1.00</td>
+
+        </tr>
+        <tr style='height:21px;'>
+            <td>Rate Per Hour: 12pm-6pm - (Peak)</td>
+            <td colspan="3">$1.50</td>
+            <td colspan="3">$1.50</td>
+        </tr>
+        <tr style='height:21px;'>
+            <td>Rate Per Hour: 6pm-11pm - (Peak)</td>
+            <td colspan="3">$2.00</td>
+            <td colspan="3">$2.00</td>
+
+        </tr>
+        <tr style='height:11px;'>
+            <td colspan="7"></td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td>Total Number of Spaces Available for Hourly and Permit Parkers</td>
+            <td colspan="3">100</td>
+            <td colspan="3">100</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td>Percent of Spaces &quot;Occupied&quot; by permit holders</td>
+            <td colspan="3">10%</td>
+            <td colspan="3">10%</td>
+
+        </tr>
+        <tr style='height:19px;'>
+            <td rowspan="2">Number of Spaces Occupied by Hourly Parkers</td>
+            <td colspan="6">Hourly/Permit</td>
+
+        </tr>
+        <tr style='height:19px;'>
+            <td colspan="3">90</td>
+            <td colspan="3">90</td>
+
+        </tr>
+        <tr style='height:11px;'>
+            <td colspan="7"></td>
+
+        </tr>
+        <tr style='height:19px;'>
+            <td rowspan="4">Days Per Year</td>
+            <td colspan="6">Peak</td>
+
+        </tr>
+        <tr style='height:19px;'>
+            <td colspan="6">85</td>
+
+        </tr>
+        <tr style='height:19px;'>
+            <td colspan="6">Non Peak</td>
+
+        </tr>
+        <tr style='height:19px;'>
+            <td colspan="6">280</td>
+
+        </tr>
+        <tr style='height:11px;'>
+            <td colspan="7"></td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td>Compliance Percentage</td>
+            <td colspan="6">60%</td>
+
+        </tr>
+        <tr style='height:11px;'>
+            <td colspan="7"></td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td rowspan="6">Occupancy Percentage (Peak)</td>
+            <td colspan="6">8am-12pm</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td colspan="3">50%</td>
+            <td colspan="3">50%</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td colspan="6">12pm-6pm</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td colspan="3">50%</td>
+            <td colspan="3">50%</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td colspan="6">6pm-11pm</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td colspan="3">50%</td>
+            <td colspan="3">50%</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td rowspan="6">Occupancy Percentage (Non Peak)</td>
+            <td colspan="6">8am-12pm</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td colspan="3">50%</td>
+            <td colspan="3">50%</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td colspan="6">12pm-6pm</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td colspan="3">50%</td>
+            <td colspan="3">50%</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td colspan="6">6pm-9pm</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td colspan="3">50%</td>
+            <td colspan="3">50%</td>
+
+        </tr>
+        <tr style='height:11px;'>
+            <td colspan="7"></td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td rowspan="2">Hours of Operation: Daily (Peak)</td>
+            <td colspan="2">8am-12pm</td>
+            <td colspan="2">12pm-6pm</td>
+            <td colspan="2">6pm-11pm</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td colspan="2">4</td>
+            <td colspan="2">6</td>
+            <td colspan="2">5</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td rowspan="2">Hours of Operation: Daily (Non Peak)</td>
+            <td colspan="2">8am-12pm</td>
+            <td colspan="2">12pm-6pm</td>
+            <td colspan="2">6pm-11pm</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td colspan="2">4</td>
+            <td colspan="2">6</td>
+            <td colspan="2">5</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td colspan="7"></td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td colspan="7">PERMITS</td>
+
+        </tr>
+        <tr style='height:26px;'>
+            <td></td>
+            <td colspan="3">Zone 1</td>
+            <td colspan="3">Zone 2</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td>Quantity Sold (Residential Permit)</td>
+            <td colspan="3">0</td>
+            <td colspan="3">0</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td>Cost Per Monthly Permit</td>
+            <td colspan="3">$100.00</td>
+            <td colspan="3">$100.00</td>
+
+        </tr>
+        <tr style='height:11px;'>
+            <td colspan="7"></td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td>Quantity Sold (Employee Permit)</td>
+            <td colspan="3">0</td>
+            <td colspan="3">0</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td>Cost Per Monthly Permit</td>
+            <td colspan="3">$100.00</td>
+            <td colspan="3">$100.00</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td colspan="7"></td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td colspan="10">PROJECTED REVENUE SUMMARY - TIME OF DAY</td>
+
+        </tr>
+        <tr style='height:31px;'>
+            <td colspan="3">Zone 1</td>
+            <td colspan="3">Zone 2</td>
+            <td colspan="3">Total</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td>
+                <div style="width: 96px; left: -15px;">Time of Day</div>
+            </td>
+            <td>Permits</td>
+            <td>Total</td>
+            <td>
+                <div style="width: 84px; left: -3px;">Time of Day</div>
+            </td>
+            <td>Permits</td>
+            <td>Total</td>
+            <td>
+                <div style="width: 94px; left: -3px;">Time of Day</div>
+            </td>
+            <td>Permits</td>
+            <td>Total</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td>
+                <div style="width: 398px; left: -1px;">Annual Revenue without Peak Season Pricing - Year 1</div>
+            </td>
+            <td>$152,753</td>
+            <td>$0</td>
+            <td>$152,753</td>
+            <td>$152,753</td>
+            <td>$0</td>
+            <td>$152,753</td>
+            <td>$305,505</td>
+            <td>$0</td>
+            <td>$305,505</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td>Annual Revenue with Peak Season Pricing - Year 1</td>
+            <td>$169,965</td>
+            <td>$0</td>
+            <td>$169,965</td>
+            <td>$169,965</td>
+            <td>$0</td>
+            <td>$169,965</td>
+            <td>$339,930</td>
+            <td>$0</td>
+            <td>$339,930</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td>Variance</td>
+            <td>$17,213 </td>
+            <td>$0 </td>
+            <td>$17,213 </td>
+            <td>$17,213 </td>
+            <td>$0 </td>
+            <td>$17,213 </td>
+            <td>$34,425 </td>
+            <td>$0 </td>
+            <td>$34,425 </td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td>
+                <div style="width: 398px; left: -1px;">Annual Revenue without Peak Season Pricing - Years 1 - 2</div>
+            </td>
+            <td>$305,505</td>
+            <td>$0</td>
+            <td>$305,505</td>
+            <td>$305,505</td>
+            <td>$0</td>
+            <td>$305,505</td>
+            <td>$611,010</td>
+            <td>$0</td>
+            <td>$611,010</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td>
+                <div style="width: 398px; left: -1px;">Annual Revenue with Peak Season Pricing - Years 1 - 2</div>
+            </td>
+            <td>$339,930</td>
+            <td>$0</td>
+            <td>$339,930</td>
+            <td>$339,930</td>
+            <td>$0</td>
+            <td>$339,930</td>
+            <td>$679,860</td>
+            <td>$0</td>
+            <td>$679,860</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td>Variance</td>
+            <td>$34,425 </td>
+            <td>$0 </td>
+            <td>$34,425 </td>
+            <td>$34,425 </td>
+            <td>$0 </td>
+            <td>$34,425 </td>
+            <td>$68,850 </td>
+            <td>$0 </td>
+            <td>$68,850 </td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td>
+                <div style="width: 398px; left: -1px;">Annual Revenue without Peak Season Pricing - Years 1 - 3</div>
+            </td>
+            <td>$458,258</td>
+            <td>$0</td>
+            <td>$458,258</td>
+            <td>$458,258</td>
+            <td>$0</td>
+            <td>$458,258</td>
+            <td>$916,515</td>
+            <td>$0</td>
+            <td>$916,515</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td>
+                <div style="width: 398px; left: -1px;">Annual Revenue with Peak Season Pricing - Years 1 - 3</div>
+            </td>
+            <td>$509,895</td>
+            <td>$0</td>
+            <td>$509,895</td>
+            <td>$509,895</td>
+            <td>$0</td>
+            <td>$509,895</td>
+            <td>$1,019,790</td>
+            <td>$0</td>
+            <td>$1,019,790</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td>Variance</td>
+            <td>$51,638 </td>
+            <td>$0 </td>
+            <td>$51,638 </td>
+            <td>$51,638 </td>
+            <td>$0 </td>
+            <td>$51,638 </td>
+            <td>$103,275 </td>
+            <td>$0 </td>
+            <td>$103,275 </td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td>
+                <div style="width: 398px; left: -1px;">Annual Revenue without Peak Season Pricing - Years 1 - 4</div>
+            </td>
+            <td>$611,010</td>
+            <td>$0</td>
+            <td>$611,010</td>
+            <td>$611,010</td>
+            <td>$0</td>
+            <td>$611,010</td>
+            <td>$1,222,020</td>
+            <td>$0</td>
+            <td>$1,222,020</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td>
+                <div style="width: 398px; left: -1px;">Annual Revenue with Peak Season Pricing - Years 1 - 4</div>
+            </td>
+            <td>$679,860</td>
+            <td>$0</td>
+            <td>$679,860</td>
+            <td>$679,860</td>
+            <td>$0</td>
+            <td>$679,860</td>
+            <td>$1,359,720</td>
+            <td>$0</td>
+            <td>$1,359,720</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td>Variance</td>
+            <td>$68,850 </td>
+            <td>$0 </td>
+            <td>$68,850 </td>
+            <td>$68,850 </td>
+            <td>$0 </td>
+            <td>$68,850 </td>
+            <td>$137,700 </td>
+            <td>$0 </td>
+            <td>$137,700 </td>
+        </tr>
+        <tr style='height:18px;'>
+            <td>
+                <div style="width: 398px; left: -1px;">Annual Revenue without Peak Season Pricing - Years 1 - 5</div>
+            </td>
+            <td>$763,763</td>
+            <td>$0</td>
+            <td>$763,763</td>
+            <td>$763,763</td>
+            <td>$0</td>
+            <td>$763,763</td>
+            <td>$1,527,525</td>
+            <td>$0</td>
+            <td>$1,527,525</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td>
+                <div style="width: 398px; left: -1px;">Annual Revenue with Peak Season Pricing - Years 1 - 5</div>
+            </td>
+            <td>$849,825</td>
+            <td>$0</td>
+            <td>$849,825</td>
+            <td>$849,825</td>
+            <td>$0</td>
+            <td>$849,825</td>
+            <td>$1,699,650</td>
+            <td>$0</td>
+            <td>$1,699,650</td>
+
+        </tr>
+        <tr style='height:18px;'>
+            <td>Variance</td>
+            <td>$86,063 </td>
+            <td>$0 </td>
+            <td>$86,063 </td>
+            <td>$86,063 </td>
+            <td>$0 </td>
+            <td>$86,063 </td>
+            <td>$172,125 </td>
+            <td>$0 </td>
+            <td>$172,125 </td>
+        </tr>
+    </tbody>
+</table>

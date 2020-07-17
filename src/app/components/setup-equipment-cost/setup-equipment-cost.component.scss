@@ -1,0 +1,47 @@
+.wrapper-content {
+  padding: 5px 10px;
+  .filter-buttons {
+    display: flex;
+    justify-content: flex-end;
+    button {
+      &:last-of-type {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+.wizard-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+td.side-header {
+  text-align: left;
+  font-weight: bold;
+}
+
+.side-header,
+.header-td {
+  position: relative;
+  .fa-info {
+    position: absolute;
+    right: 0;
+  }
+}
+
+.operating-days-div {
+  position: absolute;
+  // left: 0;
+  //  right: 0;
+  .lbl-operating-days {
+    font-weight: bold;
+  }
+  .input-operating-days {
+    border: 0;
+    border-bottom: 1px solid #2196f3;
+    outline: none;
+    margin: 0 10px;
+  }
+}

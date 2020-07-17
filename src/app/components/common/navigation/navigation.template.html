@@ -1,0 +1,40 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+  <div class="sidebar-collapse">
+    <ul class="nav metismenu" id="side-menu">
+      <li class="dixon-logo">
+        <img alt="image" src="assets/img/dixon-logo.png" />
+      </li>
+      <li class="nav-header">
+        <div class="profile-element" dropdown>
+          <!-- <img alt="image" class="rounded-circle message-avatar" src="assets/img/a1.jpg"> -->
+          <a data-toggle="dropdown" class="dropdown-toggle">
+            <span class="block m-t-xs">
+              {{authService.loggedInUser?.email}}
+            </span>
+            <span class="text-xs block">{{authService.loggedInUser?.role}}
+              <b class="caret"></b>
+            </span>
+          </a>
+          <ul class="animated fadeInRight dropdown-menu">
+            <li (click)="onRouterLinkClick('./starterview')">
+              <a>Profile</a>
+            </li>
+            <li class="divider"></li>
+            <li (click)="onLogOut()">
+              <a>Logout</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <ng-container *ngFor="let menu of menuList">
+        <li class="menu-tab" [ngClass]="{active: activeRoute(menu.route)}">
+          <a href="javascript:void(0)" (click)="onRouterLinkClick(menu.path)">
+            <i class="{{menu.icon}}"></i>
+            <span class="nav-label">{{menu.title}}</span>
+          </a>
+        </li>
+      </ng-container>
+    </ul>
+
+  </div>
+</nav>

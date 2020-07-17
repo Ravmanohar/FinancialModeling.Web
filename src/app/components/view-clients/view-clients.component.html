@@ -1,0 +1,61 @@
+<app-loader *ngIf="isShowLoader"></app-loader>
+
+<div class="white-bg wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+    <div class="col-md-12" *ngIf="authService.loggedInUser.role == 'Admin'">
+      <app-add-client-modal (onClientCreated)="onClientCreated($event)"></app-add-client-modal>
+    </div>
+    <div class="col-lg-12">
+      <table id="tbl-clients" class="table table-stripped toggle-arrow-tiny">
+        <thead>
+          <tr>
+            <th>
+              <input class="client-search-textbox" type="text" [(ngModel)]="searchText"
+                placeholder="Search Client By Name" />
+            </th>
+            <th class="main-header" colspan="3">Zones</th>
+            <th class="main-header" colspan="3">Permits</th>
+            <th></th>
+            <th></th>
+          </tr>
+          <tr>
+            <th class="sortable-column" (click)="onSortOrderChange()" title="Sort By Client Name">
+              Client Name
+              <i *ngIf="isAscendingOrder == true" class="fa fa-sort-asc"></i>
+              <i *ngIf="isAscendingOrder == false" class="fa fa-sort-desc"></i>
+              <i *ngIf="isAscendingOrder == null" class="fa fa-sort"></i>
+            </th>
+            <th class="bg-zones">On-Street</th>
+            <th class="bg-zones">Off-Street</th>
+            <th class="bg-zones">Garage</th>
+
+            <th class="bg-permits">On-Street</th>
+            <th class="bg-permits">Off-Street</th>
+            <th class="bg-permits">Garage</th>
+            <th>View</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="no-records-found" *ngIf="clientList.length == 0">
+            <td colspan="9">
+              {{isShowLoader ? 'Loading Records...' : 'No Records Found'}}
+            </td>
+          </tr>
+          <tr
+            *ngFor="let client of clientList | filter :'clientName':searchText | orderBy : columnName: isAscendingOrder">
+            <td>{{client.clientName}}</td>
+            <td class="bg-zones">{{client.onStreetZoneCount}}</td>
+            <td class="bg-zones">{{client.offStreetZoneCount}}</td>
+            <td class="bg-zones">{{client.garagesZoneCount}}</td>
+            <td class="bg-permits">{{client.onStreetPermitCount}}</td>
+            <td class="bg-permits">{{client.offStreetPermitCount}}</td>
+            <td class="bg-permits">{{client.garagesPermitCount}}</td>
+            <td>
+              <i (click)="viewClientDetails(client)" class="btn-view-client fa fa-eye"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

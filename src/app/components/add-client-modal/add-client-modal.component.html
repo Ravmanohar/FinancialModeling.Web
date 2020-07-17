@@ -1,0 +1,138 @@
+<button *ngIf="!isEditClientModal" (click)="showAddClientPopup()" type="button" class="btn btn-primary btn-sm">
+  Add Client
+</button>
+<button *ngIf="isEditClientModal" id="btn-edit-client" (click)="showAddClientPopup()" type="button"
+  class="btn btn-primary btn-sm">
+  Edit Client
+</button>
+<div class="modal" id="add-client-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content animated fadeIn">
+      <div class="modal-header">
+
+        <h4 *ngIf="!isEditClientModal" class="modal-title">Add Client</h4>
+        <!-- <h4 *ngIf="isEditClientModal" class="modal-title">Edit Client</h4> -->
+        <h4 *ngIf="isEditClientModal" class="modal-title">View Client</h4>
+
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Close</span>
+        </button>
+      </div>
+      <div id="body-content" class="modal-body ibox-content" [ngClass]="{'sk-loading' : isSaving}">
+        <card-loader></card-loader>
+        <div *ngIf="wizardPageNumber == 1" class="wizard-page card-box pb-1">
+          <div class="form-group col-md-12">
+            <label class="main-label">Name:</label>
+            <input [disabled]="isEditClientModal" [(ngModel)]="addClientModel.clientName" type="text"
+              class="form-control" placeholder="Client Name" />
+          </div>
+          <div class="form-group col-md-12 row">
+            <div class="col-md-6">
+              <label class="main-label"></label>
+              <span (click)="onPeakSeaonPricing(addNoticeModel)"
+                [ngClass]="{'checked': addClientModel.isPeakSeasonPricing}" class="dixon-checkbox"
+                for="isPeakSeasonPricing">Peak Season Pricing?</span>
+            </div>
+            <div class="col-md-6">
+              <label class="main-label"></label>
+              <span (click)="onHavePermits(addNoticeModel)" [ngClass]="{'checked': addClientModel.havePermits}"
+                class="dixon-checkbox" for="havePermits">Have Permits?</span>
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="wizardPageNumber == 2" class="wizard-page"
+          [ngClass]="{'disabled-form': !addClientModel.havePermits}">
+          <div class="form-group col-md-12">
+            <label class="main-label">Permits:</label>
+            <ng-container *ngFor="let propertyName of permitPropertyNames;">
+              <div *ngIf="parkingTypevailability[propertyName]" class="form-group row card-box">
+                <div class="col-md-12">
+                  <label class="col-form-label">{{lables[propertyName]}}</label>
+                </div>
+                <div class="col-md-12">
+                  <ng-container *ngFor="let permit of addClientModel[propertyName];let index = index;">
+                    <div *ngIf="permit.actionType != deletedActionType" class="form-group row">
+                      <label class="col-md-3 col-form-label">Permit - {{index + 1}}</label>
+                      <div class="col-md-6">
+                        <input [(ngModel)]="permit.permitName" type="text" class="form-control"
+                          placeholder="Permit Name" />
+                      </div>
+                      <div class="col-md-3">
+                        <button *ngIf="index > 0" (click)="onRemovePermit(propertyName, index)" class="btn btn-danger">
+                          <i class="fa fa-remove"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </ng-container>
+                  <div class="form-group row">
+                    <div class="col-md-3">
+                      <button (click)="onAddPermit(propertyName)" class="btn btn-primary">
+                        <i class="fa fa-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+
+        <div *ngIf="wizardPageNumber == 3" class="wizard-page">
+          <div class="form-group col-md-12">
+            <label class="main-label">Zones:</label>
+            <ng-container *ngFor="let propertyName of zonePropertyNames;">
+              <div *ngIf="parkingTypevailability[propertyName]" class="form-group row card-box">
+                <div class="col-md-12">
+                  <label class="col-form-label">{{lables[propertyName]}}</label>
+                </div>
+                <div class="col-md-12">
+                  <ng-container *ngFor="let zone of addClientModel[propertyName];let index = index;">
+                    <div *ngIf="zone.actionType != deletedActionType" class="form-group row">
+                      <label class="col-md-3 col-form-label">Zone - {{index + 1}}</label>
+                      <div class="col-md-6">
+                        <input [(ngModel)]="zone.zoneName" type="text" class="form-control" placeholder="Zone Name" />
+                      </div>
+                      <div class="col-md-3">
+                        <button *ngIf="index > 0" (click)="onRemoveZone(propertyName,index)" class="btn btn-danger">
+                          <i class="fa fa-remove"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </ng-container>
+                  <div class="form-group row">
+                    <div class="col-md-3">
+                      <button (click)="onAddZone(propertyName)" class="btn btn-primary">
+                        <i class="fa fa-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="col-md-2 wizard-buttons">
+          <button (click)="closeAddClientPopup()" type="button" class="btn btn-primary btn-sm">
+            Cancel
+          </button>
+        </div>
+        <div class="col-md-10 wizard-buttons">
+          <button *ngIf="wizardPageNumber > 1" (click)="onPrevious()" type="button" class="btn btn-primary btn-sm">
+            Previous
+          </button>
+          <button *ngIf="wizardPageNumber < maxPages" (click)="onNext()" type="button" class="btn btn-primary btn-sm">
+            Next
+          </button>
+          <button *ngIf="wizardPageNumber == maxPages" [disabled]="isSaving" (click)="onClientAdd()" type="button"
+            class="btn btn-primary btn-sm">
+            Save
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

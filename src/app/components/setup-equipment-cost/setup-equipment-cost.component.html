@@ -1,0 +1,165 @@
+<ng-container *ngTemplateOutlet="EquipmentCostModelTemplate"></ng-container>
+
+<ng-template #EquipmentCostModelTemplate>
+  <div class="col-sm-12 setup-wizard">
+    <!-- Wizard Header -->
+    <div class="col-sm-12 wizard-header">
+      <div class="operating-days-div">
+        <label class="lbl-operating-days">Operating Days :</label>
+        <input class="input-operating-days" min=0 max=365 type="number"
+          [(ngModel)]="selectedEquipmentZone.operatingDays" />
+        <button *ngIf="!calculateYearlyRevenue" (click)="onUpdateOperatingDays(selectedEquipmentZone)"
+          title="Update Operating Days" type="button" class="btn btn-primary btn-sm">
+          Update
+        </button>
+      </div>
+      <h4 class="wizard-title">Zone Name : {{selectedEquipmentZone.zoneName}} </h4>
+    </div>
+
+    <div id="setup-equipment-cost-wizard-content" class="wizard-content">
+      <!-- Wizard Body -->
+      <div class="col-sm-12 wizard-body">
+        <div class="wizard-page">
+
+          <table id="tbl-equipment-cost" class="table">
+            <tbody>
+              <tr>
+                <td>
+                  <button *ngIf="!calculateYearlyRevenue && selectedEquipmentZone.equipments.length <= 5"
+                    (click)="onAddEquipment()" type="button" class="btn btn-primary btn-sm">Add Equipment</button>
+                </td>
+                <ng-container *ngFor="let equipment of selectedEquipmentZone.equipments;let removeIndex = index;">
+                  <td *ngIf="equipment.actionType != deletedActionType" class="text-center">
+                    <button *ngIf="removeIndex > 0" (click)="onRemoveEquipment(removeIndex, equipment)"
+                      class="btn btn-danger">
+                      <i class="fa fa-remove"></i>
+                    </button>
+                  </td>
+                </ng-container>
+              </tr>
+              <tr *ngFor="let column of equipmentCostColumns">
+                <td class="header-td">
+                  <b>
+                    {{columnMapping.labels[column]}}:
+                    <i *ngIf="columnMapping.infos[locationName][column]" class="fa fa-info dixon-tooltip"
+                      [attr.info]="columnMapping.infos[locationName][column]"></i>
+                  </b>
+                </td>
+                <ng-container *ngFor="let equipment of selectedEquipmentZone.equipments">
+                  <ng-container *ngIf="equipment.actionType != deletedActionType">
+                    <!-- <td *ngIf="column != 'isWarrantyIncluded' && column != 'selectedEquipmentType'">
+                      <input *ngIf="column != 'monthlyMeterSoftwareFees' && column != 'monthlyCreditCardProcessingFees'"
+                        class="form-control" [(ngModel)]="equipment[column]" type="number" />
+
+                      <input *ngIf="column == 'monthlyMeterSoftwareFees'" class="form-control"
+                        [(ngModel)]="equipment[column]" type="number" step="0.25" />
+
+                      <input *ngIf="column == 'monthlyCreditCardProcessingFees'" class="form-control"
+                        [(ngModel)]="equipment[column]" type="number" step="0.01" />
+                    </td>
+                    <td *ngIf="column == 'isWarrantyIncluded'">
+                      <div class="dropdown equipment-type-dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                          {{equipment[column] ? 'Yes' : 'No'}}
+                        </button>
+                        <ul class="dropdown-menu">
+                          <ng-container *ngFor="let option of yesNoOptions">
+                            <li (click)="equipment[column] = (option == 'Yes')"><a>{{option}}</a>
+                            </li>
+                          </ng-container>
+                        </ul>
+                      </div>
+                    </td> -->
+                    <td *ngIf="column != 'selectedEquipmentType'">
+                      <input *ngIf="column != 'monthlyMeterSoftwareFees' && column != 'monthlyCreditCardProcessingFees'"
+                        class="form-control" [(ngModel)]="equipment[column]" type="number" />
+
+                      <input *ngIf="column == 'monthlyMeterSoftwareFees'" class="form-control"
+                        [(ngModel)]="equipment[column]" type="number" step="0.25" />
+
+                      <input *ngIf="column == 'monthlyCreditCardProcessingFees'" class="form-control"
+                        [(ngModel)]="equipment[column]" type="number" step="0.01" />
+                    </td>
+                    <td *ngIf="column == 'selectedEquipmentType'">
+                      <div class="dropdown equipment-type-dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                          {{equipment.selectedEquipmentType == null || equipment.selectedEquipmentType.typeId == 0 ? 'Select Type' : equipment.selectedEquipmentType.name}}
+                        </button>
+                        <ul class="dropdown-menu">
+                          <ng-container *ngFor="let equipmentType of luEquipmentTypes">
+                            <li (click)="onEquipmentTypeChange(equipment, equipmentType)"><a>{{equipmentType.name}}</a>
+                            </li>
+                          </ng-container>
+                        </ul>
+                      </div>
+                    </td>
+                  </ng-container>
+                </ng-container>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <!-- Wizard Footer -->
+      <div class="col-sm-12 wizard-footer">
+        <div class="left-buttons">
+          <ng-container *ngIf="calculateYearlyRevenue">
+            <button (click)="onApply()" type="button" class="btn btn-primary btn-sm"> Apply </button>
+            <!-- <button (click)="onSaveAsModel()" type="button" class="btn btn-primary btn-sm"> Save As Model </button> -->
+          </ng-container>
+        </div>
+        <div class="right-buttons">
+          <button *ngIf="selectedPage > 1" (click)="onPrevious()" type="button" class="btn btn-primary btn-sm">
+            Previous
+          </button>
+          <button *ngIf="selectedPage < lastPageNumber" (click)="onNext()" type="button" class="btn btn-primary btn-sm">
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</ng-template>
+
+<div *ngIf="calculateYearlyRevenue" class="yearly-revenue-container col-sm-12">
+  <table id="yearly-equipment-cost" class="ps-table">
+    <thead>
+      <tr class="header-tr">
+        <td [attr.colspan]="projectedEquipmentCostSummary.zoneEquipmentList.length + 1">
+          PROJECTED COSTS
+        </td>
+      </tr>
+      <tr>
+        <th class="side-header"> </th>
+        <ng-container *ngFor="let zoneSummary of projectedEquipmentCostSummary.zoneEquipmentList;">
+          <th>{{zoneSummary.zoneName}}</th>
+        </ng-container>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let column of financialDashboardService.zoneEquipmentColumns;">
+        <ng-container *ngIf="column == 'emptyRow'">
+          <tr class="empty-row">
+            <td [attr.colspan]="projectedEquipmentCostSummary.zoneEquipmentList.length + 1"></td>
+          </tr>
+        </ng-container>
+        <ng-container *ngIf="column != 'emptyRow'">
+          <tr>
+            <td class="side-header">
+              {{financialDashboardService.zoneEquipmentLabels[column]}}
+              <i *ngIf="columnMapping.infos[locationName][column]" class="fa fa-info dixon-tooltip"
+                [attr.info]="columnMapping.infos[locationName][column]"></i>
+            </td>
+            <ng-container *ngFor="let zoneEquipment of projectedEquipmentCostSummary.zoneEquipmentList;">
+              <td>{{zoneEquipment[column]  | customCurrency}}</td>
+            </ng-container>
+          </tr>
+        </ng-container>
+      </ng-container>
+    </tbody>
+  </table>
+</div>

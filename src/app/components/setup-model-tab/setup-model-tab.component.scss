@@ -1,0 +1,187 @@
+.main-label {
+  // color: #1ab394;
+  color: #203864;
+  font-size: 1rem;
+}
+
+.modal-dialog {
+  max-width: 90vw;
+  .modal-content {
+    .modal-header {
+      padding: 5px;
+    }
+    .modal-title {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+    .modal-body {
+      overflow: scroll;
+      height: 80vh;
+    }
+  }
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  .right-buttons {
+    #btn-cancel-create-model {
+      margin-right: 20px;
+    }
+  }
+}
+
+.setup-card {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px 20px;
+  margin: 10px;
+}
+
+// Start : Setup Model Popup Css
+.bootstrap-timepicker {
+  height: 35px;
+}
+
+.check-box-list {
+  list-style: none;
+  user-select: none;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  .check-box-li {
+    cursor: pointer;
+    // color: #1ab394;
+    color: #203864;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2px;
+    flex: 0 0 25%;
+    &.day-li {
+      flex: 0 0 auto;
+      margin-left: 2px;
+    }
+    .check-box {
+      font-size: 15px;
+    }
+    span.m-l-xs {
+      margin-left: 3px;
+      font-size: 0.78rem;
+    }
+  }
+}
+
+tr.no-records-found {
+  text-align: center;
+}
+
+.dixon-content {
+  background-color: #ffffff;
+  color: inherit;
+  padding: 15px 20px 20px 20px;
+}
+
+table {
+  margin: 5px 0;
+}
+
+.btn-remove {
+  background-color: #f44336;
+  border-color: #f44336;
+}
+
+select {
+  cursor: pointer;
+}
+
+.checkmark-right {
+  background-color: #10c510;
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 0.9rem;
+  height: 20px;
+  width: 20px;
+  margin-left: 20px;
+}
+
+.disabled-control {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.col-form-label {
+  font-weight: bold;
+}
+// End : Setup Model Popup Css
+
+// Start : Equipment Cost
+button.close {
+  background-color: transparent !important;
+}
+#setup-equipment-cost-modal {
+  .modal-dialog {
+    max-width: 70vw;
+    .modal-body {
+      height: 100%;
+      overflow: auto;
+    }
+
+    #btn-cancel-setup-cost {
+      margin-right: 10px;
+    }
+  }
+}
+// End : Equipment Cost
+
+table#client-zones {
+  // width: 400px;
+  td,
+  th {
+    border: none;
+    text-align: center;
+  }
+}
+
+.dixon-checkbox {
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+table#tbl-client-models {
+  width: 70%;
+  th,
+  td {
+    &.row-title {
+      font-weight: bold;
+    }
+    &.column-title {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    width: 100px;
+    text-align: center;
+    &:first-child {
+      text-align: left;
+    }
+    .fa {
+      font-size: 1rem;
+      margin-left: 5px;
+      &.fa-question-circle {
+        color: #ff9800;
+      }
+      &.fa-check {
+        color: #8bc34a;
+      }
+    }
+  }
+}
+
+#manage-client-card {
+  display: flex;
+  justify-content: center;
+}

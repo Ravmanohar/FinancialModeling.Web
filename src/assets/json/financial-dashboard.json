@@ -1,0 +1,1736 @@
+{
+    "editClientModel": {
+        "clientId": 10,
+        "clientName": "Do Not Change",
+        "isPeakSeasonPricing": false,
+        "havePermits": true,
+        "isActive": true,
+        "onStreetZones": [
+            {
+                "zoneCode": 47,
+                "zoneName": "Zone 1",
+                "actionType": 0
+            },
+            {
+                "zoneCode": 48,
+                "zoneName": "Zone 2",
+                "actionType": 0
+            }
+        ],
+        "offStreetZones": [
+            {
+                "zoneCode": 49,
+                "zoneName": "Zone 1",
+                "actionType": 0
+            },
+            {
+                "zoneCode": 50,
+                "zoneName": "Zone 2",
+                "actionType": 0
+            }
+        ],
+        "garagesZones": [
+            {
+                "zoneCode": 51,
+                "zoneName": "Zone 1",
+                "actionType": 0
+            },
+            {
+                "zoneCode": 52,
+                "zoneName": "Zone 2",
+                "actionType": 0
+            }
+        ],
+        "onStreetPermits": [
+            {
+                "permitCode": 35,
+                "permitName": "Permit 1",
+                "actionType": 0
+            },
+            {
+                "permitCode": 36,
+                "permitName": "Permit 2",
+                "actionType": 0
+            }
+        ],
+        "offStreetPermits": [
+            {
+                "permitCode": 37,
+                "permitName": "Permit 1",
+                "actionType": 0
+            },
+            {
+                "permitCode": 38,
+                "permitName": "Permit 2",
+                "actionType": 0
+            }
+        ],
+        "garagesPermits": [
+            {
+                "permitCode": 39,
+                "permitName": "Permit 1",
+                "actionType": 0
+            },
+            {
+                "permitCode": 40,
+                "permitName": "Permit 2",
+                "actionType": 0
+            }
+        ]
+    },
+    "hourlyOnStreet": {
+        "clientModelId": 82,
+        "clientId": 10,
+        "clientName": "Do Not Change",
+        "parkingTypeId": 1,
+        "selectedParkingType": {
+            "parkingTypeId": 1,
+            "parkingTypeName": "On Street"
+        },
+        "modelTypeId": 1,
+        "selectedModelType": {
+            "modelTypeId": 1,
+            "modelTypeName": "Hourly"
+        },
+        "hourlyZones": [
+            {
+                "zoneId": 47,
+                "zoneCode": 47,
+                "zoneName": "Zone 1",
+                "clientModelId": 82,
+                "clientId": 10,
+                "nonPeakSeasonHourlyRate": 1,
+                "peakSeasonHourlyRate": 0,
+                "numberOfSpacesPerZone": 100,
+                "percentOfSpaceOccupied": 10,
+                "numberOfSpacesRemaining": 90,
+                "compliancePercentage": 65,
+                "nonPeakOccupancyPercentage": 60,
+                "peakOccupancyPercentage": 0,
+                "hourlyOperatingHour": {
+                    "id": 47,
+                    "clientId": 10,
+                    "zoneId": 47,
+                    "startTime": "08:00 AM",
+                    "endTime": "06:00 PM",
+                    "totalHours": 10
+                },
+                "operatingDays": {
+                    "id": 139,
+                    "daysPerYear": 365,
+                    "peakDays": 0,
+                    "offDays": 85,
+                    "nonPeakDays": 280,
+                    "clientId": 10,
+                    "clientModelId": 82,
+                    "zoneId": 47
+                },
+                "clientPermitTypes": [
+                    {
+                        "permitId": 193,
+                        "permitCode": 35,
+                        "permitName": "Permit 1",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 82,
+                        "zoneId": 47
+                    },
+                    {
+                        "permitId": 194,
+                        "permitCode": 36,
+                        "permitName": "Permit 2",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 82,
+                        "zoneId": 47
+                    }
+                ],
+                "isModified": true
+            },
+            {
+                "zoneId": 48,
+                "zoneCode": 48,
+                "zoneName": "Zone 2",
+                "clientModelId": 82,
+                "clientId": 10,
+                "nonPeakSeasonHourlyRate": 1,
+                "peakSeasonHourlyRate": 0,
+                "numberOfSpacesPerZone": 100,
+                "percentOfSpaceOccupied": 10,
+                "numberOfSpacesRemaining": 90,
+                "compliancePercentage": 60,
+                "nonPeakOccupancyPercentage": 50,
+                "peakOccupancyPercentage": 0,
+                "hourlyOperatingHour": {
+                    "id": 48,
+                    "clientId": 10,
+                    "zoneId": 48,
+                    "startTime": "08:00 AM",
+                    "endTime": "06:00 PM",
+                    "totalHours": 10
+                },
+                "operatingDays": {
+                    "id": 142,
+                    "daysPerYear": 365,
+                    "peakDays": 0,
+                    "offDays": 80,
+                    "nonPeakDays": 285,
+                    "clientId": 10,
+                    "clientModelId": 82,
+                    "zoneId": 48
+                },
+                "clientPermitTypes": [
+                    {
+                        "permitId": 199,
+                        "permitCode": 35,
+                        "permitName": "Permit 1",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 82,
+                        "zoneId": 48
+                    },
+                    {
+                        "permitId": 200,
+                        "permitCode": 36,
+                        "permitName": "Permit 2",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 82,
+                        "zoneId": 48
+                    }
+                ],
+                "isModified": false
+            }
+        ],
+        "isSetupDone": true,
+        "isAvailable": true
+    },
+    "hourlyOffStreet": {
+        "clientModelId": 83,
+        "clientId": 10,
+        "clientName": "Do Not Change",
+        "parkingTypeId": 2,
+        "selectedParkingType": {
+            "parkingTypeId": 2,
+            "parkingTypeName": "Off Street"
+        },
+        "modelTypeId": 1,
+        "selectedModelType": {
+            "modelTypeId": 1,
+            "modelTypeName": "Hourly"
+        },
+        "hourlyZones": [
+            {
+                "zoneId": 49,
+                "zoneCode": 49,
+                "zoneName": "Zone 1",
+                "clientModelId": 83,
+                "clientId": 10,
+                "nonPeakSeasonHourlyRate": 1,
+                "peakSeasonHourlyRate": 0,
+                "numberOfSpacesPerZone": 100,
+                "percentOfSpaceOccupied": 50,
+                "numberOfSpacesRemaining": 50,
+                "compliancePercentage": 50,
+                "nonPeakOccupancyPercentage": 50,
+                "peakOccupancyPercentage": 0,
+                "hourlyOperatingHour": {
+                    "id": 49,
+                    "clientId": 10,
+                    "zoneId": 49,
+                    "startTime": "08:00 AM",
+                    "endTime": "06:00 PM",
+                    "totalHours": 10
+                },
+                "operatingDays": {
+                    "id": 145,
+                    "daysPerYear": 365,
+                    "peakDays": 0,
+                    "offDays": 10,
+                    "nonPeakDays": 355,
+                    "clientId": 10,
+                    "clientModelId": 83,
+                    "zoneId": 49
+                },
+                "clientPermitTypes": [
+                    {
+                        "permitId": 205,
+                        "permitCode": 37,
+                        "permitName": "Permit 1",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 83,
+                        "zoneId": 49
+                    },
+                    {
+                        "permitId": 206,
+                        "permitCode": 38,
+                        "permitName": "Permit 2",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 83,
+                        "zoneId": 49
+                    }
+                ],
+                "isModified": false
+            },
+            {
+                "zoneId": 50,
+                "zoneCode": 50,
+                "zoneName": "Zone 2",
+                "clientModelId": 83,
+                "clientId": 10,
+                "nonPeakSeasonHourlyRate": 1,
+                "peakSeasonHourlyRate": 0,
+                "numberOfSpacesPerZone": 100,
+                "percentOfSpaceOccupied": 50,
+                "numberOfSpacesRemaining": 50,
+                "compliancePercentage": 50,
+                "nonPeakOccupancyPercentage": 50,
+                "peakOccupancyPercentage": 0,
+                "hourlyOperatingHour": {
+                    "id": 50,
+                    "clientId": 10,
+                    "zoneId": 50,
+                    "startTime": "08:00 AM",
+                    "endTime": "06:00 PM",
+                    "totalHours": 10
+                },
+                "operatingDays": {
+                    "id": 148,
+                    "daysPerYear": 365,
+                    "peakDays": 0,
+                    "offDays": 10,
+                    "nonPeakDays": 355,
+                    "clientId": 10,
+                    "clientModelId": 83,
+                    "zoneId": 50
+                },
+                "clientPermitTypes": [
+                    {
+                        "permitId": 211,
+                        "permitCode": 37,
+                        "permitName": "Permit 1",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 83,
+                        "zoneId": 50
+                    },
+                    {
+                        "permitId": 212,
+                        "permitCode": 38,
+                        "permitName": "Permit 2",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 83,
+                        "zoneId": 50
+                    }
+                ],
+                "isModified": false
+            }
+        ],
+        "isSetupDone": false,
+        "isAvailable": false
+    },
+    "hourlyGarages": {
+        "clientModelId": 84,
+        "clientId": 10,
+        "clientName": "Do Not Change",
+        "parkingTypeId": 3,
+        "selectedParkingType": {
+            "parkingTypeId": 3,
+            "parkingTypeName": "Garages"
+        },
+        "modelTypeId": 1,
+        "selectedModelType": {
+            "modelTypeId": 1,
+            "modelTypeName": "Hourly"
+        },
+        "hourlyZones": [
+            {
+                "zoneId": 51,
+                "zoneCode": 51,
+                "zoneName": "Zone 1",
+                "clientModelId": 84,
+                "clientId": 10,
+                "nonPeakSeasonHourlyRate": 1,
+                "peakSeasonHourlyRate": 0,
+                "numberOfSpacesPerZone": 100,
+                "percentOfSpaceOccupied": 50,
+                "numberOfSpacesRemaining": 50,
+                "compliancePercentage": 50,
+                "nonPeakOccupancyPercentage": 50,
+                "peakOccupancyPercentage": 0,
+                "hourlyOperatingHour": {
+                    "id": 51,
+                    "clientId": 10,
+                    "zoneId": 51,
+                    "startTime": "08:00 AM",
+                    "endTime": "06:00 PM",
+                    "totalHours": 10
+                },
+                "operatingDays": {
+                    "id": 151,
+                    "daysPerYear": 365,
+                    "peakDays": 0,
+                    "offDays": 10,
+                    "nonPeakDays": 355,
+                    "clientId": 10,
+                    "clientModelId": 84,
+                    "zoneId": 51
+                },
+                "clientPermitTypes": [
+                    {
+                        "permitId": 217,
+                        "permitCode": 39,
+                        "permitName": "Permit 1",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 84,
+                        "zoneId": 51
+                    },
+                    {
+                        "permitId": 218,
+                        "permitCode": 40,
+                        "permitName": "Permit 2",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 84,
+                        "zoneId": 51
+                    }
+                ],
+                "isModified": false
+            },
+            {
+                "zoneId": 52,
+                "zoneCode": 52,
+                "zoneName": "Zone 2",
+                "clientModelId": 84,
+                "clientId": 10,
+                "nonPeakSeasonHourlyRate": 1,
+                "peakSeasonHourlyRate": 0,
+                "numberOfSpacesPerZone": 100,
+                "percentOfSpaceOccupied": 50,
+                "numberOfSpacesRemaining": 50,
+                "compliancePercentage": 50,
+                "nonPeakOccupancyPercentage": 50,
+                "peakOccupancyPercentage": 0,
+                "hourlyOperatingHour": {
+                    "id": 52,
+                    "clientId": 10,
+                    "zoneId": 52,
+                    "startTime": "08:00 AM",
+                    "endTime": "06:00 PM",
+                    "totalHours": 10
+                },
+                "operatingDays": {
+                    "id": 154,
+                    "daysPerYear": 365,
+                    "peakDays": 0,
+                    "offDays": 10,
+                    "nonPeakDays": 355,
+                    "clientId": 10,
+                    "clientModelId": 84,
+                    "zoneId": 52
+                },
+                "clientPermitTypes": [
+                    {
+                        "permitId": 223,
+                        "permitCode": 39,
+                        "permitName": "Permit 1",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 84,
+                        "zoneId": 52
+                    },
+                    {
+                        "permitId": 224,
+                        "permitCode": 40,
+                        "permitName": "Permit 2",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 84,
+                        "zoneId": 52
+                    }
+                ],
+                "isModified": false
+            }
+        ],
+        "isSetupDone": false,
+        "isAvailable": false
+    },
+    "timeOfDayOnStreet": {
+        "clientModelId": 85,
+        "clientId": 10,
+        "clientName": "Do Not Change",
+        "parkingTypeId": 1,
+        "selectedParkingType": {
+            "parkingTypeId": 1,
+            "parkingTypeName": "On Street"
+        },
+        "modelTypeId": 2,
+        "selectedModelType": {
+            "modelTypeId": 2,
+            "modelTypeName": "Time of the day"
+        },
+        "timeOfDayZones": [
+            {
+                "zoneId": 47,
+                "zoneCode": 47,
+                "zoneName": "Zone 1",
+                "clientModelId": 85,
+                "clientId": 10,
+                "numberOfSpacesPerZone": 100,
+                "percentOfSpaceOccupied": 10,
+                "numberOfSpacesRemaining": 90,
+                "compliancePercentage": 65,
+                "hoursOfOperations": [
+                    {
+                        "id": 47,
+                        "clientId": 10,
+                        "zoneId": 47,
+                        "clientModelId": 85,
+                        "peakSeasonHourlyRate": 0,
+                        "nonPeakSeasonHourlyRate": 0.5,
+                        "operatingHoursStart": "08:00 AM",
+                        "operatingHoursEnd": "08:00 AM",
+                        "totalHours": 0,
+                        "nonPeakOccupancyPercentage": 50,
+                        "peakOccupancyPercentage": 0,
+                        "actionType": 2
+                    },
+                    {
+                        "id": 63,
+                        "clientId": 10,
+                        "zoneId": 47,
+                        "clientModelId": 85,
+                        "peakSeasonHourlyRate": 0,
+                        "nonPeakSeasonHourlyRate": 1,
+                        "operatingHoursStart": "12:00 PM",
+                        "operatingHoursEnd": "12:00 PM",
+                        "totalHours": 0,
+                        "nonPeakOccupancyPercentage": 50,
+                        "peakOccupancyPercentage": 0,
+                        "actionType": 2
+                    },
+                    {
+                        "id": 64,
+                        "clientId": 10,
+                        "zoneId": 47,
+                        "clientModelId": 85,
+                        "peakSeasonHourlyRate": 0,
+                        "nonPeakSeasonHourlyRate": 1.5,
+                        "operatingHoursStart": "06:00 PM",
+                        "operatingHoursEnd": "06:00 PM",
+                        "totalHours": 0,
+                        "nonPeakOccupancyPercentage": 50,
+                        "peakOccupancyPercentage": 0,
+                        "actionType": 2
+                    }
+                ],
+                "operatingDays": {
+                    "id": 140,
+                    "daysPerYear": 365,
+                    "peakDays": 0,
+                    "offDays": 85,
+                    "nonPeakDays": 280,
+                    "clientId": 10,
+                    "clientModelId": 85,
+                    "zoneId": 47
+                },
+                "clientPermitTypes": [
+                    {
+                        "permitId": 195,
+                        "permitCode": 35,
+                        "permitName": "Permit 1",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 85,
+                        "zoneId": 47
+                    },
+                    {
+                        "permitId": 196,
+                        "permitCode": 36,
+                        "permitName": "Permit 2",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 85,
+                        "zoneId": 47
+                    }
+                ],
+                "isModified": false
+            },
+            {
+                "zoneId": 48,
+                "zoneCode": 48,
+                "zoneName": "Zone 2",
+                "clientModelId": 85,
+                "clientId": 10,
+                "numberOfSpacesPerZone": 100,
+                "percentOfSpaceOccupied": 10,
+                "numberOfSpacesRemaining": 90,
+                "compliancePercentage": 60,
+                "hoursOfOperations": [
+                    {
+                        "id": 48,
+                        "clientId": 10,
+                        "zoneId": 48,
+                        "clientModelId": 85,
+                        "peakSeasonHourlyRate": 0,
+                        "nonPeakSeasonHourlyRate": 0.5,
+                        "operatingHoursStart": "08:00 AM",
+                        "operatingHoursEnd": "08:00 AM",
+                        "totalHours": 0,
+                        "nonPeakOccupancyPercentage": 50,
+                        "peakOccupancyPercentage": 0,
+                        "actionType": 2
+                    },
+                    {
+                        "id": 65,
+                        "clientId": 10,
+                        "zoneId": 48,
+                        "clientModelId": 85,
+                        "peakSeasonHourlyRate": 0,
+                        "nonPeakSeasonHourlyRate": 1,
+                        "operatingHoursStart": "12:00 PM",
+                        "operatingHoursEnd": "12:00 PM",
+                        "totalHours": 0,
+                        "nonPeakOccupancyPercentage": 50,
+                        "peakOccupancyPercentage": 0,
+                        "actionType": 2
+                    },
+                    {
+                        "id": 66,
+                        "clientId": 10,
+                        "zoneId": 48,
+                        "clientModelId": 85,
+                        "peakSeasonHourlyRate": 0,
+                        "nonPeakSeasonHourlyRate": 1.5,
+                        "operatingHoursStart": "06:00 PM",
+                        "operatingHoursEnd": "06:00 PM",
+                        "totalHours": 0,
+                        "nonPeakOccupancyPercentage": 50,
+                        "peakOccupancyPercentage": 0,
+                        "actionType": 2
+                    }
+                ],
+                "operatingDays": {
+                    "id": 143,
+                    "daysPerYear": 365,
+                    "peakDays": 0,
+                    "offDays": 85,
+                    "nonPeakDays": 280,
+                    "clientId": 10,
+                    "clientModelId": 85,
+                    "zoneId": 48
+                },
+                "clientPermitTypes": [
+                    {
+                        "permitId": 201,
+                        "permitCode": 35,
+                        "permitName": "Permit 1",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 85,
+                        "zoneId": 48
+                    },
+                    {
+                        "permitId": 202,
+                        "permitCode": 36,
+                        "permitName": "Permit 2",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 85,
+                        "zoneId": 48
+                    }
+                ],
+                "isModified": false
+            }
+        ],
+        "isSetupDone": true,
+        "isAvailable": true
+    },
+    "timeOfDayOffStreet": {
+        "clientModelId": 86,
+        "clientId": 10,
+        "clientName": "Do Not Change",
+        "parkingTypeId": 2,
+        "selectedParkingType": {
+            "parkingTypeId": 2,
+            "parkingTypeName": "Off Street"
+        },
+        "modelTypeId": 2,
+        "selectedModelType": {
+            "modelTypeId": 2,
+            "modelTypeName": "Time of the day"
+        },
+        "timeOfDayZones": [
+            {
+                "zoneId": 49,
+                "zoneCode": 49,
+                "zoneName": "Zone 1",
+                "clientModelId": 86,
+                "clientId": 10,
+                "numberOfSpacesPerZone": 100,
+                "percentOfSpaceOccupied": 50,
+                "numberOfSpacesRemaining": 50,
+                "compliancePercentage": 50,
+                "hoursOfOperations": [
+                    {
+                        "id": 49,
+                        "clientId": 10,
+                        "zoneId": 49,
+                        "clientModelId": 86,
+                        "peakSeasonHourlyRate": 0,
+                        "nonPeakSeasonHourlyRate": 1,
+                        "operatingHoursStart": "08:00 AM",
+                        "operatingHoursEnd": "08:00 AM",
+                        "totalHours": 0,
+                        "nonPeakOccupancyPercentage": 50,
+                        "peakOccupancyPercentage": 0,
+                        "actionType": 2
+                    }
+                ],
+                "operatingDays": {
+                    "id": 146,
+                    "daysPerYear": 365,
+                    "peakDays": 0,
+                    "offDays": 10,
+                    "nonPeakDays": 355,
+                    "clientId": 10,
+                    "clientModelId": 86,
+                    "zoneId": 49
+                },
+                "clientPermitTypes": [
+                    {
+                        "permitId": 207,
+                        "permitCode": 37,
+                        "permitName": "Permit 1",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 86,
+                        "zoneId": 49
+                    },
+                    {
+                        "permitId": 208,
+                        "permitCode": 38,
+                        "permitName": "Permit 2",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 86,
+                        "zoneId": 49
+                    }
+                ],
+                "isModified": false
+            },
+            {
+                "zoneId": 50,
+                "zoneCode": 50,
+                "zoneName": "Zone 2",
+                "clientModelId": 86,
+                "clientId": 10,
+                "numberOfSpacesPerZone": 100,
+                "percentOfSpaceOccupied": 50,
+                "numberOfSpacesRemaining": 50,
+                "compliancePercentage": 50,
+                "hoursOfOperations": [
+                    {
+                        "id": 50,
+                        "clientId": 10,
+                        "zoneId": 50,
+                        "clientModelId": 86,
+                        "peakSeasonHourlyRate": 0,
+                        "nonPeakSeasonHourlyRate": 1,
+                        "operatingHoursStart": "08:00 AM",
+                        "operatingHoursEnd": "08:00 AM",
+                        "totalHours": 0,
+                        "nonPeakOccupancyPercentage": 50,
+                        "peakOccupancyPercentage": 0,
+                        "actionType": 2
+                    }
+                ],
+                "operatingDays": {
+                    "id": 149,
+                    "daysPerYear": 365,
+                    "peakDays": 0,
+                    "offDays": 10,
+                    "nonPeakDays": 355,
+                    "clientId": 10,
+                    "clientModelId": 86,
+                    "zoneId": 50
+                },
+                "clientPermitTypes": [
+                    {
+                        "permitId": 213,
+                        "permitCode": 37,
+                        "permitName": "Permit 1",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 86,
+                        "zoneId": 50
+                    },
+                    {
+                        "permitId": 214,
+                        "permitCode": 38,
+                        "permitName": "Permit 2",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 86,
+                        "zoneId": 50
+                    }
+                ],
+                "isModified": false
+            }
+        ],
+        "isSetupDone": false,
+        "isAvailable": false
+    },
+    "timeOfDayGarages": {
+        "clientModelId": 87,
+        "clientId": 10,
+        "clientName": "Do Not Change",
+        "parkingTypeId": 3,
+        "selectedParkingType": {
+            "parkingTypeId": 3,
+            "parkingTypeName": "Garages"
+        },
+        "modelTypeId": 2,
+        "selectedModelType": {
+            "modelTypeId": 2,
+            "modelTypeName": "Time of the day"
+        },
+        "timeOfDayZones": [
+            {
+                "zoneId": 51,
+                "zoneCode": 51,
+                "zoneName": "Zone 1",
+                "clientModelId": 87,
+                "clientId": 10,
+                "numberOfSpacesPerZone": 100,
+                "percentOfSpaceOccupied": 50,
+                "numberOfSpacesRemaining": 50,
+                "compliancePercentage": 50,
+                "hoursOfOperations": [
+                    {
+                        "id": 51,
+                        "clientId": 10,
+                        "zoneId": 51,
+                        "clientModelId": 87,
+                        "peakSeasonHourlyRate": 0,
+                        "nonPeakSeasonHourlyRate": 1,
+                        "operatingHoursStart": "08:00 AM",
+                        "operatingHoursEnd": "08:00 AM",
+                        "totalHours": 0,
+                        "nonPeakOccupancyPercentage": 50,
+                        "peakOccupancyPercentage": 0,
+                        "actionType": 2
+                    }
+                ],
+                "operatingDays": {
+                    "id": 152,
+                    "daysPerYear": 365,
+                    "peakDays": 0,
+                    "offDays": 10,
+                    "nonPeakDays": 355,
+                    "clientId": 10,
+                    "clientModelId": 87,
+                    "zoneId": 51
+                },
+                "clientPermitTypes": [
+                    {
+                        "permitId": 219,
+                        "permitCode": 39,
+                        "permitName": "Permit 1",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 87,
+                        "zoneId": 51
+                    },
+                    {
+                        "permitId": 220,
+                        "permitCode": 40,
+                        "permitName": "Permit 2",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 87,
+                        "zoneId": 51
+                    }
+                ],
+                "isModified": false
+            },
+            {
+                "zoneId": 52,
+                "zoneCode": 52,
+                "zoneName": "Zone 2",
+                "clientModelId": 87,
+                "clientId": 10,
+                "numberOfSpacesPerZone": 100,
+                "percentOfSpaceOccupied": 50,
+                "numberOfSpacesRemaining": 50,
+                "compliancePercentage": 50,
+                "hoursOfOperations": [
+                    {
+                        "id": 52,
+                        "clientId": 10,
+                        "zoneId": 52,
+                        "clientModelId": 87,
+                        "peakSeasonHourlyRate": 0,
+                        "nonPeakSeasonHourlyRate": 1,
+                        "operatingHoursStart": "08:00 AM",
+                        "operatingHoursEnd": "08:00 AM",
+                        "totalHours": 0,
+                        "nonPeakOccupancyPercentage": 50,
+                        "peakOccupancyPercentage": 0,
+                        "actionType": 2
+                    }
+                ],
+                "operatingDays": {
+                    "id": 155,
+                    "daysPerYear": 365,
+                    "peakDays": 0,
+                    "offDays": 10,
+                    "nonPeakDays": 355,
+                    "clientId": 10,
+                    "clientModelId": 87,
+                    "zoneId": 52
+                },
+                "clientPermitTypes": [
+                    {
+                        "permitId": 225,
+                        "permitCode": 39,
+                        "permitName": "Permit 1",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 87,
+                        "zoneId": 52
+                    },
+                    {
+                        "permitId": 226,
+                        "permitCode": 40,
+                        "permitName": "Permit 2",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 87,
+                        "zoneId": 52
+                    }
+                ],
+                "isModified": false
+            }
+        ],
+        "isSetupDone": false,
+        "isAvailable": false
+    },
+    "escalatingOnStreet": {
+        "clientModelId": 88,
+        "clientId": 10,
+        "clientName": "Do Not Change",
+        "parkingTypeId": 1,
+        "selectedParkingType": {
+            "parkingTypeId": 1,
+            "parkingTypeName": "On Street"
+        },
+        "modelTypeId": 3,
+        "selectedModelType": {
+            "modelTypeId": 3,
+            "modelTypeName": "Escalating"
+        },
+        "escalatingZones": [
+            {
+                "zoneId": 47,
+                "zoneCode": 47,
+                "zoneName": "Zone 1",
+                "clientModelId": 88,
+                "clientId": 10,
+                "nonPeakHourlyRate": 1,
+                "nonPeakEscalatingRate": 1,
+                "nonPeakHourEscalatingRateBegins": 3,
+                "nonPeakDailyMaxOrAllDayRate": 20,
+                "nonPeakEveningFlatRate": 20,
+                "peakHourlyRate": 0,
+                "peakEscalatingRate": 0,
+                "peakHourEscalatingRateBegins": 0,
+                "peakDailyMaxOrAllDayRate": 0,
+                "peakEveningFlatRate": 0,
+                "numberOfSpacesPerZone": 100,
+                "percentOfSpaceOccupied": 10,
+                "numberOfSpacesRemaining": 90,
+                "compliancePercentage": 60,
+                "nonPeakOccupancyPercentage": 60,
+                "peakOccupancyPercentage": 0,
+                "operatingDays": {
+                    "id": 141,
+                    "daysPerYear": 365,
+                    "peakDays": 0,
+                    "offDays": 85,
+                    "nonPeakDays": 280,
+                    "clientId": 10,
+                    "clientModelId": 88,
+                    "zoneId": 47
+                },
+                "escalatingOperatingHourDaily": {
+                    "id": 93,
+                    "clientId": 10,
+                    "zoneId": 47,
+                    "clientModelId": 88,
+                    "startTime": "08:00 AM",
+                    "endTime": "06:00 PM",
+                    "totalHours": 10,
+                    "operatingHourType": 1
+                },
+                "escalatingOperatingHourEvening": {
+                    "id": 94,
+                    "clientId": 10,
+                    "zoneId": 47,
+                    "clientModelId": 88,
+                    "startTime": "06:00 PM",
+                    "endTime": "11:00 PM",
+                    "totalHours": 5,
+                    "operatingHourType": 2
+                },
+                "clientPermitTypes": [
+                    {
+                        "permitId": 197,
+                        "permitCode": 35,
+                        "permitName": "Permit 1",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 88,
+                        "zoneId": 47
+                    },
+                    {
+                        "permitId": 198,
+                        "permitCode": 36,
+                        "permitName": "Permit 2",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 88,
+                        "zoneId": 47
+                    }
+                ],
+                "isModified": false
+            },
+            {
+                "zoneId": 48,
+                "zoneCode": 48,
+                "zoneName": "Zone 2",
+                "clientModelId": 88,
+                "clientId": 10,
+                "nonPeakHourlyRate": 1,
+                "nonPeakEscalatingRate": 1,
+                "nonPeakHourEscalatingRateBegins": 3,
+                "nonPeakDailyMaxOrAllDayRate": 20,
+                "nonPeakEveningFlatRate": 20,
+                "peakHourlyRate": 0,
+                "peakEscalatingRate": 0,
+                "peakHourEscalatingRateBegins": 0,
+                "peakDailyMaxOrAllDayRate": 0,
+                "peakEveningFlatRate": 0,
+                "numberOfSpacesPerZone": 100,
+                "percentOfSpaceOccupied": 10,
+                "numberOfSpacesRemaining": 90,
+                "compliancePercentage": 60,
+                "nonPeakOccupancyPercentage": 50,
+                "peakOccupancyPercentage": 0,
+                "operatingDays": {
+                    "id": 144,
+                    "daysPerYear": 365,
+                    "peakDays": 0,
+                    "offDays": 85,
+                    "nonPeakDays": 280,
+                    "clientId": 10,
+                    "clientModelId": 88,
+                    "zoneId": 48
+                },
+                "escalatingOperatingHourDaily": {
+                    "id": 95,
+                    "clientId": 10,
+                    "zoneId": 48,
+                    "clientModelId": 88,
+                    "startTime": "08:00 AM",
+                    "endTime": "06:00 PM",
+                    "totalHours": 10,
+                    "operatingHourType": 1
+                },
+                "escalatingOperatingHourEvening": {
+                    "id": 96,
+                    "clientId": 10,
+                    "zoneId": 48,
+                    "clientModelId": 88,
+                    "startTime": "06:00 PM",
+                    "endTime": "11:00 PM",
+                    "totalHours": 5,
+                    "operatingHourType": 2
+                },
+                "clientPermitTypes": [
+                    {
+                        "permitId": 203,
+                        "permitCode": 35,
+                        "permitName": "Permit 1",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 88,
+                        "zoneId": 48
+                    },
+                    {
+                        "permitId": 204,
+                        "permitCode": 36,
+                        "permitName": "Permit 2",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 88,
+                        "zoneId": 48
+                    }
+                ],
+                "isModified": false
+            }
+        ],
+        "isSetupDone": true,
+        "isAvailable": true
+    },
+    "escalatingOffStreet": {
+        "clientModelId": 89,
+        "clientId": 10,
+        "clientName": "Do Not Change",
+        "parkingTypeId": 2,
+        "selectedParkingType": {
+            "parkingTypeId": 2,
+            "parkingTypeName": "Off Street"
+        },
+        "modelTypeId": 3,
+        "selectedModelType": {
+            "modelTypeId": 3,
+            "modelTypeName": "Escalating"
+        },
+        "escalatingZones": [
+            {
+                "zoneId": 49,
+                "zoneCode": 49,
+                "zoneName": "Zone 1",
+                "clientModelId": 89,
+                "clientId": 10,
+                "nonPeakHourlyRate": 1.25,
+                "nonPeakEscalatingRate": 1.25,
+                "nonPeakHourEscalatingRateBegins": 1.25,
+                "nonPeakDailyMaxOrAllDayRate": 1.25,
+                "nonPeakEveningFlatRate": 1.25,
+                "peakHourlyRate": 0,
+                "peakEscalatingRate": 0,
+                "peakHourEscalatingRateBegins": 0,
+                "peakDailyMaxOrAllDayRate": 0,
+                "peakEveningFlatRate": 0,
+                "numberOfSpacesPerZone": 100,
+                "percentOfSpaceOccupied": 50,
+                "numberOfSpacesRemaining": 50,
+                "compliancePercentage": 50,
+                "nonPeakOccupancyPercentage": 50,
+                "peakOccupancyPercentage": 0,
+                "operatingDays": {
+                    "id": 147,
+                    "daysPerYear": 365,
+                    "peakDays": 0,
+                    "offDays": 10,
+                    "nonPeakDays": 355,
+                    "clientId": 10,
+                    "clientModelId": 89,
+                    "zoneId": 49
+                },
+                "escalatingOperatingHourDaily": {
+                    "id": 97,
+                    "clientId": 10,
+                    "zoneId": 49,
+                    "clientModelId": 89,
+                    "startTime": "08:00 AM",
+                    "endTime": "06:00 PM",
+                    "totalHours": 10,
+                    "operatingHourType": 1
+                },
+                "escalatingOperatingHourEvening": {
+                    "id": 98,
+                    "clientId": 10,
+                    "zoneId": 49,
+                    "clientModelId": 89,
+                    "startTime": "08:00 AM",
+                    "endTime": "06:00 PM",
+                    "totalHours": 10,
+                    "operatingHourType": 2
+                },
+                "clientPermitTypes": [
+                    {
+                        "permitId": 209,
+                        "permitCode": 37,
+                        "permitName": "Permit 1",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 89,
+                        "zoneId": 49
+                    },
+                    {
+                        "permitId": 210,
+                        "permitCode": 38,
+                        "permitName": "Permit 2",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 89,
+                        "zoneId": 49
+                    }
+                ],
+                "isModified": false
+            },
+            {
+                "zoneId": 50,
+                "zoneCode": 50,
+                "zoneName": "Zone 2",
+                "clientModelId": 89,
+                "clientId": 10,
+                "nonPeakHourlyRate": 1,
+                "nonPeakEscalatingRate": 1,
+                "nonPeakHourEscalatingRateBegins": 1,
+                "nonPeakDailyMaxOrAllDayRate": 1,
+                "nonPeakEveningFlatRate": 1,
+                "peakHourlyRate": 0,
+                "peakEscalatingRate": 0,
+                "peakHourEscalatingRateBegins": 0,
+                "peakDailyMaxOrAllDayRate": 0,
+                "peakEveningFlatRate": 0,
+                "numberOfSpacesPerZone": 100,
+                "percentOfSpaceOccupied": 50,
+                "numberOfSpacesRemaining": 50,
+                "compliancePercentage": 50,
+                "nonPeakOccupancyPercentage": 50,
+                "peakOccupancyPercentage": 0,
+                "operatingDays": {
+                    "id": 150,
+                    "daysPerYear": 365,
+                    "peakDays": 0,
+                    "offDays": 10,
+                    "nonPeakDays": 355,
+                    "clientId": 10,
+                    "clientModelId": 89,
+                    "zoneId": 50
+                },
+                "escalatingOperatingHourDaily": {
+                    "id": 99,
+                    "clientId": 10,
+                    "zoneId": 50,
+                    "clientModelId": 89,
+                    "startTime": "08:00 AM",
+                    "endTime": "06:00 PM",
+                    "totalHours": 10,
+                    "operatingHourType": 1
+                },
+                "escalatingOperatingHourEvening": {
+                    "id": 100,
+                    "clientId": 10,
+                    "zoneId": 50,
+                    "clientModelId": 89,
+                    "startTime": "08:00 AM",
+                    "endTime": "06:00 PM",
+                    "totalHours": 10,
+                    "operatingHourType": 2
+                },
+                "clientPermitTypes": [
+                    {
+                        "permitId": 215,
+                        "permitCode": 37,
+                        "permitName": "Permit 1",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 89,
+                        "zoneId": 50
+                    },
+                    {
+                        "permitId": 216,
+                        "permitCode": 38,
+                        "permitName": "Permit 2",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 89,
+                        "zoneId": 50
+                    }
+                ],
+                "isModified": false
+            }
+        ],
+        "isSetupDone": true,
+        "isAvailable": false
+    },
+    "escalatingGarages": {
+        "clientModelId": 90,
+        "clientId": 10,
+        "clientName": "Do Not Change",
+        "parkingTypeId": 3,
+        "selectedParkingType": {
+            "parkingTypeId": 3,
+            "parkingTypeName": "Garages"
+        },
+        "modelTypeId": 3,
+        "selectedModelType": {
+            "modelTypeId": 3,
+            "modelTypeName": "Escalating"
+        },
+        "escalatingZones": [
+            {
+                "zoneId": 51,
+                "zoneCode": 51,
+                "zoneName": "Zone 1",
+                "clientModelId": 90,
+                "clientId": 10,
+                "nonPeakHourlyRate": 1,
+                "nonPeakEscalatingRate": 1,
+                "nonPeakHourEscalatingRateBegins": 1,
+                "nonPeakDailyMaxOrAllDayRate": 1,
+                "nonPeakEveningFlatRate": 1,
+                "peakHourlyRate": 0,
+                "peakEscalatingRate": 0,
+                "peakHourEscalatingRateBegins": 0,
+                "peakDailyMaxOrAllDayRate": 0,
+                "peakEveningFlatRate": 0,
+                "numberOfSpacesPerZone": 100,
+                "percentOfSpaceOccupied": 50,
+                "numberOfSpacesRemaining": 50,
+                "compliancePercentage": 50,
+                "nonPeakOccupancyPercentage": 50,
+                "peakOccupancyPercentage": 0,
+                "operatingDays": {
+                    "id": 153,
+                    "daysPerYear": 365,
+                    "peakDays": 0,
+                    "offDays": 10,
+                    "nonPeakDays": 355,
+                    "clientId": 10,
+                    "clientModelId": 90,
+                    "zoneId": 51
+                },
+                "escalatingOperatingHourDaily": {
+                    "id": 101,
+                    "clientId": 10,
+                    "zoneId": 51,
+                    "clientModelId": 90,
+                    "startTime": "08:00 AM",
+                    "endTime": "06:00 PM",
+                    "totalHours": 10,
+                    "operatingHourType": 1
+                },
+                "escalatingOperatingHourEvening": {
+                    "id": 102,
+                    "clientId": 10,
+                    "zoneId": 51,
+                    "clientModelId": 90,
+                    "startTime": "08:00 AM",
+                    "endTime": "06:00 PM",
+                    "totalHours": 10,
+                    "operatingHourType": 2
+                },
+                "clientPermitTypes": [
+                    {
+                        "permitId": 221,
+                        "permitCode": 39,
+                        "permitName": "Permit 1",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 90,
+                        "zoneId": 51
+                    },
+                    {
+                        "permitId": 222,
+                        "permitCode": 40,
+                        "permitName": "Permit 2",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 90,
+                        "zoneId": 51
+                    }
+                ],
+                "isModified": false
+            },
+            {
+                "zoneId": 52,
+                "zoneCode": 52,
+                "zoneName": "Zone 2",
+                "clientModelId": 90,
+                "clientId": 10,
+                "nonPeakHourlyRate": 1,
+                "nonPeakEscalatingRate": 1,
+                "nonPeakHourEscalatingRateBegins": 1,
+                "nonPeakDailyMaxOrAllDayRate": 1,
+                "nonPeakEveningFlatRate": 1,
+                "peakHourlyRate": 0,
+                "peakEscalatingRate": 0,
+                "peakHourEscalatingRateBegins": 0,
+                "peakDailyMaxOrAllDayRate": 0,
+                "peakEveningFlatRate": 0,
+                "numberOfSpacesPerZone": 100,
+                "percentOfSpaceOccupied": 50,
+                "numberOfSpacesRemaining": 50,
+                "compliancePercentage": 50,
+                "nonPeakOccupancyPercentage": 50,
+                "peakOccupancyPercentage": 0,
+                "operatingDays": {
+                    "id": 156,
+                    "daysPerYear": 365,
+                    "peakDays": 0,
+                    "offDays": 10,
+                    "nonPeakDays": 355,
+                    "clientId": 10,
+                    "clientModelId": 90,
+                    "zoneId": 52
+                },
+                "escalatingOperatingHourDaily": {
+                    "id": 103,
+                    "clientId": 10,
+                    "zoneId": 52,
+                    "clientModelId": 90,
+                    "startTime": "08:00 AM",
+                    "endTime": "06:00 PM",
+                    "totalHours": 10,
+                    "operatingHourType": 1
+                },
+                "escalatingOperatingHourEvening": {
+                    "id": 104,
+                    "clientId": 10,
+                    "zoneId": 52,
+                    "clientModelId": 90,
+                    "startTime": "08:00 AM",
+                    "endTime": "06:00 PM",
+                    "totalHours": 10,
+                    "operatingHourType": 2
+                },
+                "clientPermitTypes": [
+                    {
+                        "permitId": 227,
+                        "permitCode": 39,
+                        "permitName": "Permit 1",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 90,
+                        "zoneId": 52
+                    },
+                    {
+                        "permitId": 228,
+                        "permitCode": 40,
+                        "permitName": "Permit 2",
+                        "annualCost": 0,
+                        "quantitySold": 0,
+                        "clientId": 10,
+                        "clientModelId": 90,
+                        "zoneId": 52
+                    }
+                ],
+                "isModified": false
+            }
+        ],
+        "isSetupDone": false,
+        "isAvailable": false
+    },
+    "onStreetEquipmentCost": {
+        "zones": [
+            {
+                "clientId": 10,
+                "zoneCode": 47,
+                "zoneName": "Zone 1",
+                "locationType": "OnStreet",
+                "parkingTypeId": 1,
+                "equipments": [
+                    {
+                        "equipmentId": 55,
+                        "unitsOwned": 50,
+                        "unitsPurchased": 50,
+                        "costOfBaseUnit": 1000,
+                        "warrantyStartingYear": 50,
+                        "monthlyMeterSoftwareFees": 6,
+                        "monthlyCreditCardProcessingFees": 0.13,
+                        "estimatedCreditCardTransaction": 3,
+                        "equipmentTypeId": 1,
+                        "clientId": 10,
+                        "zoneCode": 47,
+                        "parkingTypeId": 1,
+                        "selectedEquipmentType": null,
+                        "actionType": 2
+                    }
+                ],
+                "equipment": {
+                    "equipmentId": 0,
+                    "unitsOwned": 50,
+                    "unitsPurchased": 50,
+                    "costOfBaseUnit": 1000,
+                    "warrantyStartingYear": 50,
+                    "monthlyMeterSoftwareFees": 6,
+                    "monthlyCreditCardProcessingFees": 0.13,
+                    "estimatedCreditCardTransaction": 3,
+                    "equipmentTypeId": 0,
+                    "clientId": 0,
+                    "parkingTypeId": 0,
+                    "selectedEquipmentType": {
+                        "id": 0,
+                        "name": "",
+                        "typeId": 0
+                    },
+                    "actionType": 1
+                }
+            },
+            {
+                "clientId": 10,
+                "zoneCode": 48,
+                "zoneName": "Zone 2",
+                "locationType": "OnStreet",
+                "parkingTypeId": 1,
+                "equipments": [
+                    {
+                        "equipmentId": 56,
+                        "unitsOwned": 50,
+                        "unitsPurchased": 50,
+                        "costOfBaseUnit": 1000,
+                        "warrantyStartingYear": 50,
+                        "monthlyMeterSoftwareFees": 6,
+                        "monthlyCreditCardProcessingFees": 0.13,
+                        "estimatedCreditCardTransaction": 3,
+                        "equipmentTypeId": 1,
+                        "clientId": 10,
+                        "zoneCode": 48,
+                        "parkingTypeId": 1,
+                        "selectedEquipmentType": null,
+                        "actionType": 2
+                    }
+                ],
+                "equipment": {
+                    "equipmentId": 0,
+                    "unitsOwned": 50,
+                    "unitsPurchased": 50,
+                    "costOfBaseUnit": 1000,
+                    "warrantyStartingYear": 50,
+                    "monthlyMeterSoftwareFees": 6,
+                    "monthlyCreditCardProcessingFees": 0.13,
+                    "estimatedCreditCardTransaction": 3,
+                    "equipmentTypeId": 0,
+                    "clientId": 0,
+                    "parkingTypeId": 0,
+                    "selectedEquipmentType": {
+                        "id": 0,
+                        "name": "",
+                        "typeId": 0
+                    },
+                    "actionType": 1
+                }
+            }
+        ]
+    },
+    "offStreetEquipmentCost": {
+        "zones": [
+            {
+                "clientId": 10,
+                "zoneCode": 49,
+                "zoneName": "Zone 1",
+                "locationType": "OffStreet",
+                "parkingTypeId": 2,
+                "equipments": [
+                    {
+                        "equipmentId": 57,
+                        "unitsOwned": 0,
+                        "unitsPurchased": 0,
+                        "costOfBaseUnit": 0,
+                        "warrantyStartingYear": 0,
+                        "monthlyMeterSoftwareFees": 0,
+                        "monthlyCreditCardProcessingFees": 0,
+                        "estimatedCreditCardTransaction": 0,
+                        "equipmentTypeId": 1,
+                        "clientId": 10,
+                        "zoneCode": 49,
+                        "parkingTypeId": 2,
+                        "selectedEquipmentType": null,
+                        "actionType": 2
+                    }
+                ],
+                "equipment": {
+                    "equipmentId": 0,
+                    "unitsOwned": 0,
+                    "unitsPurchased": 0,
+                    "costOfBaseUnit": 0,
+                    "warrantyStartingYear": 0,
+                    "monthlyMeterSoftwareFees": 0,
+                    "monthlyCreditCardProcessingFees": 0,
+                    "estimatedCreditCardTransaction": 0,
+                    "equipmentTypeId": 0,
+                    "clientId": 0,
+                    "parkingTypeId": 0,
+                    "selectedEquipmentType": {
+                        "id": 0,
+                        "name": "",
+                        "typeId": 0
+                    },
+                    "actionType": 1
+                }
+            },
+            {
+                "clientId": 10,
+                "zoneCode": 50,
+                "zoneName": "Zone 2",
+                "locationType": "OffStreet",
+                "parkingTypeId": 2,
+                "equipments": [
+                    {
+                        "equipmentId": 58,
+                        "unitsOwned": 0,
+                        "unitsPurchased": 0,
+                        "costOfBaseUnit": 0,
+                        "warrantyStartingYear": 0,
+                        "monthlyMeterSoftwareFees": 0,
+                        "monthlyCreditCardProcessingFees": 0,
+                        "estimatedCreditCardTransaction": 0,
+                        "equipmentTypeId": 1,
+                        "clientId": 10,
+                        "zoneCode": 50,
+                        "parkingTypeId": 2,
+                        "selectedEquipmentType": null,
+                        "actionType": 2
+                    }
+                ],
+                "equipment": {
+                    "equipmentId": 0,
+                    "unitsOwned": 0,
+                    "unitsPurchased": 0,
+                    "costOfBaseUnit": 0,
+                    "warrantyStartingYear": 0,
+                    "monthlyMeterSoftwareFees": 0,
+                    "monthlyCreditCardProcessingFees": 0,
+                    "estimatedCreditCardTransaction": 0,
+                    "equipmentTypeId": 0,
+                    "clientId": 0,
+                    "parkingTypeId": 0,
+                    "selectedEquipmentType": {
+                        "id": 0,
+                        "name": "",
+                        "typeId": 0
+                    },
+                    "actionType": 1
+                }
+            }
+        ]
+    },
+    "garagesEquipmentCost": {
+        "zones": [
+            {
+                "clientId": 10,
+                "zoneCode": 51,
+                "zoneName": "Zone 1",
+                "locationType": "Garages",
+                "parkingTypeId": 3,
+                "equipments": [
+                    {
+                        "equipmentId": 59,
+                        "unitsOwned": 0,
+                        "unitsPurchased": 0,
+                        "costOfBaseUnit": 0,
+                        "warrantyStartingYear": 0,
+                        "monthlyMeterSoftwareFees": 0,
+                        "monthlyCreditCardProcessingFees": 0,
+                        "estimatedCreditCardTransaction": 0,
+                        "equipmentTypeId": 1,
+                        "clientId": 10,
+                        "zoneCode": 51,
+                        "parkingTypeId": 3,
+                        "selectedEquipmentType": null,
+                        "actionType": 2
+                    }
+                ],
+                "equipment": {
+                    "equipmentId": 0,
+                    "unitsOwned": 0,
+                    "unitsPurchased": 0,
+                    "costOfBaseUnit": 0,
+                    "warrantyStartingYear": 0,
+                    "monthlyMeterSoftwareFees": 0,
+                    "monthlyCreditCardProcessingFees": 0,
+                    "estimatedCreditCardTransaction": 0,
+                    "equipmentTypeId": 0,
+                    "clientId": 0,
+                    "parkingTypeId": 0,
+                    "selectedEquipmentType": {
+                        "id": 0,
+                        "name": "",
+                        "typeId": 0
+                    },
+                    "actionType": 1
+                }
+            },
+            {
+                "clientId": 10,
+                "zoneCode": 52,
+                "zoneName": "Zone 2",
+                "locationType": "Garages",
+                "parkingTypeId": 3,
+                "equipments": [
+                    {
+                        "equipmentId": 60,
+                        "unitsOwned": 0,
+                        "unitsPurchased": 0,
+                        "costOfBaseUnit": 0,
+                        "warrantyStartingYear": 0,
+                        "monthlyMeterSoftwareFees": 0,
+                        "monthlyCreditCardProcessingFees": 0,
+                        "estimatedCreditCardTransaction": 0,
+                        "equipmentTypeId": 1,
+                        "clientId": 10,
+                        "zoneCode": 52,
+                        "parkingTypeId": 3,
+                        "selectedEquipmentType": null,
+                        "actionType": 2
+                    }
+                ],
+                "equipment": {
+                    "equipmentId": 0,
+                    "unitsOwned": 0,
+                    "unitsPurchased": 0,
+                    "costOfBaseUnit": 0,
+                    "warrantyStartingYear": 0,
+                    "monthlyMeterSoftwareFees": 0,
+                    "monthlyCreditCardProcessingFees": 0,
+                    "estimatedCreditCardTransaction": 0,
+                    "equipmentTypeId": 0,
+                    "clientId": 0,
+                    "parkingTypeId": 0,
+                    "selectedEquipmentType": {
+                        "id": 0,
+                        "name": "",
+                        "typeId": 0
+                    },
+                    "actionType": 1
+                }
+            }
+        ]
+    }
+}

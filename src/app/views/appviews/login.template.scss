@@ -1,0 +1,17 @@
+.logo-container {
+  margin-bottom: 50px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  padding: 15px;
+  background: #203864;
+  color: #fff;
+  font-size: 1rem;
+}

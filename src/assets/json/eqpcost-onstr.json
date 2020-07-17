@@ -1,0 +1,108 @@
+{
+    "singleSpaceMeters": [
+      {
+        "id": 0,
+        "name": "Zone 1",
+        "unitsOwned": 10,
+        "unitsPurchased": 10,
+        "costOfBaseUnit": 10,
+        "warrantyStartingYear": 10,
+        "monthlyMeterSoftwareFees": 10,
+        "monthlyCreditCardProcessingFee": 10,
+        "estimatedCreditCardTransaction": 10,
+        "isAlternateOption": false,
+        "clientId": 3
+      },
+      {
+        "id": 0,
+        "name": "Zone 2",
+        "unitsOwned": 10,
+        "unitsPurchased": 10,
+        "costOfBaseUnit": 10,
+        "warrantyStartingYear": 10,
+        "monthlyMeterSoftwareFees": 10,
+        "monthlyCreditCardProcessingFee": 10,
+        "estimatedCreditCardTransaction": 10,
+        "isAlternateOption": false,
+        "clientId": 3
+      },
+      {
+        "id": 0,
+        "name": "Zone 3",
+        "unitsOwned": 10,
+        "unitsPurchased": 10,
+        "costOfBaseUnit": 10,
+        "warrantyStartingYear": 10,
+        "monthlyMeterSoftwareFees": 10,
+        "monthlyCreditCardProcessingFee": 10,
+        "estimatedCreditCardTransaction": 10,
+        "isAlternateOption": false,
+        "clientId": 3
+      }
+    ],
+    "alternateOptions": {
+      "dualSpaceMeters": {
+        "id": 0,
+        "name": "dualSpaceMeters",
+        "unitsOwned": 10,
+        "unitsPurchased": 10,
+        "costOfBaseUnit": 10,
+        "warrantyStartingYear": 10,
+        "monthlyMeterSoftwareFees": 10,
+        "monthlyCreditCardProcessingFee": 10,
+        "estimatedCreditCardTransaction": 10,
+        "isAlternateOption": true,
+        "clientId": 3
+      },
+      "payStations": {
+        "id": 0,
+        "name": "payStations",
+        "unitsOwned": 10,
+        "unitsPurchased": 10,
+        "costOfBaseUnit": 10,
+        "warrantyStartingYear": 10,
+        "monthlyMeterSoftwareFees": 10,
+        "monthlyCreditCardProcessingFee": 10,
+        "estimatedCreditCardTransaction": 10,
+        "isAlternateOption": true,
+        "clientId": 3
+      },
+      "mobileOnly": {
+        "id": 0,
+        "name": "mobileOnly",
+        "unitsOwned": 10,
+        "unitsPurchased": 10,
+        "costOfBaseUnit": 10,
+        "warrantyStartingYear": 10,
+        "monthlyMeterSoftwareFees": 10,
+        "monthlyCreditCardProcessingFee": 10,
+        "estimatedCreditCardTransaction": 10,
+        "isAlternateOption": true,
+        "clientId": 3
+      }
+    },
+    "lables": {
+      "unitsOwned": "Quantity of Units Owned (Default Per Zone)",
+      "unitsPurchased": "Quantity of Units Purchased (Default Per Zone)",
+      "costOfBaseUnit": "Cost of Base Unit",
+      "warrantyStartingYear": "Annual Warranty (applies starting in Year)",
+      "monthlyMeterSoftwareFees": "Monthly Meter Software Fees - Per Unit",
+      "monthlyCreditCardProcessingFee": "Monthly CC Processing Fees - Per Transaction**",
+      "estimatedCreditCardTransaction": "Estimated # of Credit Card Trans Per Unit / Per Day",
+      "isAlternateOption": "isAlternateOption"
+    },
+    "columnNames": [
+      "unitsOwned",
+      "unitsPurchased",
+      "costOfBaseUnit",
+      "warrantyStartingYear",
+      "monthlyMeterSoftwareFees",
+      "monthlyCreditCardProcessingFee",
+      "estimatedCreditCardTransaction"
+    ],
+    "alternameOptionTypes": [
+      "dualSpaceMeters",
+      "payStations",
+      "mobileOnly"
+    ]
+  }

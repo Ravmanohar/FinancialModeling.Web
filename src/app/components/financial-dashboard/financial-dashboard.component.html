@@ -1,0 +1,147 @@
+<app-loader *ngIf="!financialDashboardService.isFinancialDashboardLoaded"></app-loader>
+
+<div class="row">
+  <div class="col-lg-12 header-buttons">
+    <button *ngIf="projectionId == 0" [disabled]="!financialDashboardService.isFinancialDashboardLoaded"
+      (click)="onShowSaveProjectionPopup()" type="button" class="btn btn-primary btn-sm">
+      Save As Projection
+    </button>
+    <button *ngIf="projectionId != 0" [disabled]="!financialDashboardService.isFinancialDashboardLoaded"
+      (click)="onUpdateProjection()" type="button" class="btn btn-primary btn-sm">
+      Update Projection
+    </button>
+
+    <label class="title-name">{{clientOrProjectionName}}</label>
+
+    <div class="right-container">
+      <button [disabled]="!financialDashboardService.isFinancialDashboardLoaded" (click)="onDownloadReport()"
+        type="button" class="btn btn-primary btn-sm margin-right-5">
+        Download As Excel
+      </button>
+      <button (click)="onBackToProjections()" class="btn btn-primary btn-sm">
+        Back To Projections
+      </button>
+    </div>
+  </div>
+</div>
+
+<div [ngClass]="{'disabled-block' : !financialDashboardService.isFinancialDashboardLoaded}">
+  <div class="tabs" *ngIf="financialDashboardTabs.length > 0">
+    <i (click)="onArrowNavigation('left')" class="fa fa-angle-left navigation-arrow"></i>
+    <ng-container *ngFor="let tab of financialDashboardTabs;let index = index;">
+      <ng-container *ngIf="index >= tabPosition.start && index <= tabPosition.end">
+        <div (click)="onTabChange(tab)" class="tab" [ngClass]="{'active' : tab.tabCode == activeTabName}">
+          <div class="tab-box">
+            {{tab.tabName}}
+          </div>
+        </div>
+      </ng-container>
+    </ng-container>
+    <i (click)="onArrowNavigation('right')" class="fa fa-angle-right navigation-arrow"></i>
+  </div>
+  <div *ngIf="financialDashboardService.isFinancialDashboardLoaded" class="financial-dashboard-content">
+    <!-- <ng-container *ngIf="activeTabName == 'Instructions'">
+      <app-instructions></app-instructions>
+    </ng-container> -->
+    <ng-container *ngIf="activeTabName == 'financialDashboard'">
+      <app-main-dashboard [financialDashboard]="financialDashboard" [onParentCommand]="onParentCommand">
+      </app-main-dashboard>
+    </ng-container>
+
+    <ng-container *ngIf="activeTabName == 'hourlyOnStreet'">
+      <app-hourly-model [calculateYearlyRevenue]="true" [modelName]="'hourlyOnStreet'"
+        [financialDashboard]="financialDashboard" (onChildAction)="onChildAction($event)"
+        [onParentCommand]="onParentCommand"></app-hourly-model>
+    </ng-container>
+    <ng-container *ngIf="activeTabName == 'hourlyOffStreet'">
+      <app-hourly-model [calculateYearlyRevenue]="true" [modelName]="'hourlyOffStreet'"
+        [financialDashboard]="financialDashboard" (onChildAction)="onChildAction($event)"
+        [onParentCommand]="onParentCommand"></app-hourly-model>
+    </ng-container>
+    <ng-container *ngIf="activeTabName == 'hourlyGarages'">
+      <app-hourly-model [calculateYearlyRevenue]="true" [modelName]="'hourlyGarages'"
+        [financialDashboard]="financialDashboard" (onChildAction)="onChildAction($event)"
+        [onParentCommand]="onParentCommand"></app-hourly-model>
+    </ng-container>
+
+    <ng-container *ngIf="activeTabName == 'timeOfDayOnStreet'">
+      <app-timeofday-model [calculateYearlyRevenue]="true" [modelName]="'timeOfDayOnStreet'"
+        [financialDashboard]="financialDashboard" (onChildAction)="onChildAction($event)"
+        [onParentCommand]="onParentCommand"></app-timeofday-model>
+    </ng-container>
+    <ng-container *ngIf="activeTabName == 'timeOfDayOffStreet'">
+      <app-timeofday-model [calculateYearlyRevenue]="true" [modelName]="'timeOfDayOffStreet'"
+        [financialDashboard]="financialDashboard" (onChildAction)="onChildAction($event)"
+        [onParentCommand]="onParentCommand"></app-timeofday-model>
+    </ng-container>
+    <ng-container *ngIf="activeTabName == 'timeOfDayGarages'">
+      <app-timeofday-model [calculateYearlyRevenue]="true" [modelName]="'timeOfDayGarages'"
+        [financialDashboard]="financialDashboard" (onChildAction)="onChildAction($event)"
+        [onParentCommand]="onParentCommand"></app-timeofday-model>
+    </ng-container>
+
+    <ng-container *ngIf="activeTabName == 'escalatingOnStreet'">
+      <app-escalating-model [calculateYearlyRevenue]="true" [modelName]="'escalatingOnStreet'"
+        [financialDashboard]="financialDashboard" (onChildAction)="onChildAction($event)"
+        [onParentCommand]="onParentCommand"></app-escalating-model>
+    </ng-container>
+    <ng-container *ngIf="activeTabName == 'escalatingOffStreet'">
+      <app-escalating-model [calculateYearlyRevenue]="true" [modelName]="'escalatingOffStreet'"
+        [financialDashboard]="financialDashboard" (onChildAction)="onChildAction($event)"
+        [onParentCommand]="onParentCommand"></app-escalating-model>
+    </ng-container>
+    <ng-container *ngIf="activeTabName == 'escalatingGarages'">
+      <app-escalating-model [calculateYearlyRevenue]="true" [modelName]="'escalatingGarages'"
+        [financialDashboard]="financialDashboard" (onChildAction)="onChildAction($event)"
+        [onParentCommand]="onParentCommand"></app-escalating-model>
+    </ng-container>
+
+    <ng-container *ngIf="activeTabName == 'onStreetEquipmentCost'">
+      <app-setup-equipment-cost [calculateYearlyRevenue]="true" [onParentCommand]="onParentCommand"
+        [ClientInfo]="clientInfo" [parkingTypeId]="1" [financialDashboard]="financialDashboard">
+      </app-setup-equipment-cost>
+    </ng-container>
+
+    <ng-container *ngIf="activeTabName == 'offStreetEquipmentCost'">
+      <app-setup-equipment-cost [calculateYearlyRevenue]="true" [onParentCommand]="onParentCommand"
+        [ClientInfo]="clientInfo" [parkingTypeId]="2" [financialDashboard]="financialDashboard">
+      </app-setup-equipment-cost>
+    </ng-container>
+
+    <ng-container *ngIf="activeTabName == 'garagesEquipmentCost'">
+      <app-setup-equipment-cost [calculateYearlyRevenue]="true" [onParentCommand]="onParentCommand"
+        [ClientInfo]="clientInfo" [parkingTypeId]="3" [financialDashboard]="financialDashboard">
+      </app-setup-equipment-cost>
+    </ng-container>
+
+  </div>
+
+</div>
+
+
+<div class="modal" id="saveas-model-popup" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content animated">
+      <div class="modal-header">
+
+        <h4 class="modal-title">Save Projection</h4>
+
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Close</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group col-md-12">
+          <label class="col-form-label">Projection Name:</label>
+          <input [(ngModel)]="projectionName" type="text" class="form-control" placeholder="Projection Name" />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button [disabled]="isShowLoader" (click)="onSaveAsProjection()" type="button" class="btn btn-primary btn-sm">
+          Save Projection
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

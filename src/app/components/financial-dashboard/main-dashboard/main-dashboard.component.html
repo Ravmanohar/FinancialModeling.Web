@@ -1,0 +1,102 @@
+<app-loader *ngIf="isShowLoader"></app-loader>
+
+<div class="yearly-revenue-container col-sm-12">
+
+  <div class="row model-types">
+    <div class="col-md-12">
+      <ng-container *ngFor="let model of modelTypes">
+        <span (click)="onModelChange(model)" [ngClass]="{'checked': model == selectedModel}"
+          class="dixon-checkbox">{{model.displayName}}</span>
+      </ng-container>
+    </div>
+  </div>
+
+  <table id="main-dashboard" class="ps-table">
+    <thead>
+      <tr class="header-tr">
+        <td>
+          FINANCIAL DASHBOARD
+        </td>
+        <td [attr.colspan]="1000">
+          {{selectedModel.displayName}}
+        </td>
+      </tr>
+      <tr *ngIf="financialDashboardService.numberOfYears.length > 0">
+        <td></td>
+        <td *ngIf="locationNames.indexOf('onStreet') >= 0"
+          [attr.colspan]="financialDashboard.editClientModel.onStreetZones.length + 1">
+          <b>On-Street</b>
+        </td>
+        <td *ngIf="locationNames.indexOf('offStreet') >= 0"
+          [attr.colspan]="financialDashboard.editClientModel.offStreetZones.length + 1">
+          <b>Off-Street</b>
+        </td>
+        <td *ngIf="locationNames.indexOf('garages') >= 0"
+          [attr.colspan]="financialDashboard.editClientModel.garagesZones.length + 1">
+          <b>Garage</b>
+        </td>
+      </tr>
+    </thead>
+    <tbody *ngIf="financialDashboardService.numberOfYears.length == 0">
+      <tr>
+        <td class="no-data-row" [attr.colspan]="1000">No Data</td>
+      </tr>
+    </tbody>
+    <tbody *ngIf="financialDashboardService.numberOfYears.length > 0">
+      <tr>
+        <td></td>
+        <ng-container *ngFor="let locationName of locationNames;">
+          <ng-container *ngFor="let zone of financialDashboard.editClientModel[locationName + 'Zones']">
+            <td>
+              <b>{{zone.zoneName}}</b>
+            </td>
+          </ng-container>
+          <td>
+            <b>Total</b>
+          </td>
+        </ng-container>
+      </tr>
+      <ng-container *ngFor="let year of financialDashboardService.numberOfYears;">
+        <ng-container *ngFor="let peakCol of peakNonPeakColumns;">
+          <tr>
+            <td *ngIf="year == 1" class="side-header">
+              Annual Revenue {{peakCol == 'peak'? 'With' : 'Without'}} Peak Season Pricing - Year {{year}}
+            </td>
+            <td *ngIf="year > 1" class="side-header">
+              Annual Revenue {{peakCol == 'peak'? 'With' : 'Without'}} Peak Season Pricing - Years 1 - {{year}}
+            </td>
+            <ng-container *ngFor="let locationName of locationNames;">
+              <ng-container *ngFor="let zoneRevenue of selectedReportView[locationName]['year'+ year];">
+                <td>{{zoneRevenue[peakCol].revenue | currency}}</td>
+              </ng-container>
+            </ng-container>
+          </tr>
+          <tr>
+            <td *ngIf="year == 1" class="side-header">
+              Equipment & Operating Cost - Year {{year}}
+            </td>
+            <td *ngIf="year > 1" class="side-header">
+              Equipment & Operating Cost - Years 1 - {{year}}
+            </td>
+            <ng-container *ngFor="let locationName of locationNames;">
+              <ng-container *ngFor="let zoneRevenue of selectedReportView[locationName]['year'+ year];">
+                <td>{{zoneRevenue[peakCol].cost | currency}}</td>
+              </ng-container>
+            </ng-container>
+          </tr>
+          <tr>
+            <td class="side-header"> Net Gain/Loss </td>
+            <ng-container *ngFor="let locationName of locationNames;">
+              <ng-container *ngFor="let zoneRevenue of selectedReportView[locationName]['year'+ year];">
+                <td>{{zoneRevenue[peakCol].gain | currency}}</td>
+              </ng-container>
+            </ng-container>
+          </tr>
+          <tr class="empty-row">
+            <td [attr.colspan]="1000"></td>
+          </tr>
+        </ng-container>
+      </ng-container>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,639 @@
+{
+  "projectedRevenueSummaries": [
+    {
+      "reportName": "ReportName 1",
+      "reportHeader": "ReportName 1",
+      "zoneSummaryList": [
+        {
+          "zoneCode": 87,
+          "zoneName": "Zone 1",
+          "nonPeak": {
+            "hourly": 91250,
+            "permit": 0,
+            "total": 91250
+          },
+          "peak": {
+            "hourly": 88750,
+            "permit": 0,
+            "total": 88750
+          },
+          "variance": {
+            "hourly": -2500,
+            "permit": 0,
+            "total": -2500
+          }
+        },
+        {
+          "zoneCode": 87,
+          "zoneName": "Zone 2",
+          "nonPeak": {
+            "hourly": 91250,
+            "permit": 0,
+            "total": 91250
+          },
+          "peak": {
+            "hourly": 88750,
+            "permit": 0,
+            "total": 88750
+          },
+          "variance": {
+            "hourly": -2500,
+            "permit": 0,
+            "total": -2500
+          }
+        },
+        {
+          "zoneCode": 87,
+          "zoneName": "Zone 2",
+          "nonPeak": {
+            "hourly": 91250,
+            "permit": 0,
+            "total": 91250
+          },
+          "peak": {
+            "hourly": 88750,
+            "permit": 0,
+            "total": 88750
+          },
+          "variance": {
+            "hourly": -2500,
+            "permit": 0,
+            "total": -2500
+          }
+        }
+      ]
+    },
+    {
+      "reportName": "ReportName 2",
+      "reportHeader": "ReportName 2",
+      "zoneSummaryList": [
+        {
+          "zoneCode": 87,
+          "zoneName": "Zone 1",
+          "nonPeak": {
+            "hourly": 91250,
+            "permit": 0,
+            "total": 91250
+          },
+          "peak": {
+            "hourly": 88750,
+            "permit": 0,
+            "total": 88750
+          },
+          "variance": {
+            "hourly": -2500,
+            "permit": 0,
+            "total": -2500
+          }
+        },
+        {
+          "zoneCode": 87,
+          "zoneName": "Zone 2",
+          "nonPeak": {
+            "hourly": 91250,
+            "permit": 0,
+            "total": 91250
+          },
+          "peak": {
+            "hourly": 88750,
+            "permit": 0,
+            "total": 88750
+          },
+          "variance": {
+            "hourly": -2500,
+            "permit": 0,
+            "total": -2500
+          }
+        },
+        {
+          "zoneCode": 87,
+          "zoneName": "Zone 2",
+          "nonPeak": {
+            "hourly": 91250,
+            "permit": 0,
+            "total": 91250
+          },
+          "peak": {
+            "hourly": 88750,
+            "permit": 0,
+            "total": 88750
+          },
+          "variance": {
+            "hourly": -2500,
+            "permit": 0,
+            "total": -2500
+          }
+        }
+      ]
+    },
+    {
+      "reportName": "ReportName 3",
+      "reportHeader": "ReportName 3",
+      "zoneSummaryList": [
+        {
+          "zoneCode": 87,
+          "zoneName": "Zone 1",
+          "nonPeak": {
+            "hourly": 91250,
+            "permit": 0,
+            "total": 91250
+          },
+          "peak": {
+            "hourly": 88750,
+            "permit": 0,
+            "total": 88750
+          },
+          "variance": {
+            "hourly": -2500,
+            "permit": 0,
+            "total": -2500
+          }
+        },
+        {
+          "zoneCode": 87,
+          "zoneName": "Zone 2",
+          "nonPeak": {
+            "hourly": 91250,
+            "permit": 0,
+            "total": 91250
+          },
+          "peak": {
+            "hourly": 88750,
+            "permit": 0,
+            "total": 88750
+          },
+          "variance": {
+            "hourly": -2500,
+            "permit": 0,
+            "total": -2500
+          }
+        },
+        {
+          "zoneCode": 87,
+          "zoneName": "Zone 2",
+          "nonPeak": {
+            "hourly": 91250,
+            "permit": 0,
+            "total": 91250
+          },
+          "peak": {
+            "hourly": 88750,
+            "permit": 0,
+            "total": 88750
+          },
+          "variance": {
+            "hourly": -2500,
+            "permit": 0,
+            "total": -2500
+          }
+        }
+      ]
+    },
+    {
+      "reportName": "ReportName 4",
+      "reportHeader": "ReportName 4",
+      "zoneSummaryList": [
+        {
+          "zoneCode": 87,
+          "zoneName": "Zone 1",
+          "nonPeak": {
+            "hourly": 91250,
+            "permit": 0,
+            "total": 91250
+          },
+          "peak": {
+            "hourly": 88750,
+            "permit": 0,
+            "total": 88750
+          },
+          "variance": {
+            "hourly": -2500,
+            "permit": 0,
+            "total": -2500
+          }
+        },
+        {
+          "zoneCode": 87,
+          "zoneName": "Zone 2",
+          "nonPeak": {
+            "hourly": 91250,
+            "permit": 0,
+            "total": 91250
+          },
+          "peak": {
+            "hourly": 88750,
+            "permit": 0,
+            "total": 88750
+          },
+          "variance": {
+            "hourly": -2500,
+            "permit": 0,
+            "total": -2500
+          }
+        },
+        {
+          "zoneCode": 87,
+          "zoneName": "Zone 2",
+          "nonPeak": {
+            "hourly": 91250,
+            "permit": 0,
+            "total": 91250
+          },
+          "peak": {
+            "hourly": 88750,
+            "permit": 0,
+            "total": 88750
+          },
+          "variance": {
+            "hourly": -2500,
+            "permit": 0,
+            "total": -2500
+          }
+        }
+      ]
+    },
+    {
+      "reportName": "ReportName 5",
+      "reportHeader": "ReportName 5",
+      "zoneSummaryList": [
+        {
+          "zoneCode": 87,
+          "zoneName": "Zone 1",
+          "nonPeak": {
+            "hourly": 91250,
+            "permit": 0,
+            "total": 91250
+          },
+          "peak": {
+            "hourly": 88750,
+            "permit": 0,
+            "total": 88750
+          },
+          "variance": {
+            "hourly": -2500,
+            "permit": 0,
+            "total": -2500
+          }
+        },
+        {
+          "zoneCode": 87,
+          "zoneName": "Zone 2",
+          "nonPeak": {
+            "hourly": 91250,
+            "permit": 0,
+            "total": 91250
+          },
+          "peak": {
+            "hourly": 88750,
+            "permit": 0,
+            "total": 88750
+          },
+          "variance": {
+            "hourly": -2500,
+            "permit": 0,
+            "total": -2500
+          }
+        },
+        {
+          "zoneCode": 87,
+          "zoneName": "Zone 2",
+          "nonPeak": {
+            "hourly": 91250,
+            "permit": 0,
+            "total": 91250
+          },
+          "peak": {
+            "hourly": 88750,
+            "permit": 0,
+            "total": 88750
+          },
+          "variance": {
+            "hourly": -2500,
+            "permit": 0,
+            "total": -2500
+          }
+        }
+      ]
+    },
+    {
+      "reportName": "ReportName 6",
+      "reportHeader": "ReportName 6",
+      "zoneSummaryList": [
+        {
+          "zoneCode": 87,
+          "zoneName": "Zone 1",
+          "nonPeak": {
+            "hourly": 91250,
+            "permit": 0,
+            "total": 91250
+          },
+          "peak": {
+            "hourly": 88750,
+            "permit": 0,
+            "total": 88750
+          },
+          "variance": {
+            "hourly": -2500,
+            "permit": 0,
+            "total": -2500
+          }
+        },
+        {
+          "zoneCode": 87,
+          "zoneName": "Zone 2",
+          "nonPeak": {
+            "hourly": 91250,
+            "permit": 0,
+            "total": 91250
+          },
+          "peak": {
+            "hourly": 88750,
+            "permit": 0,
+            "total": 88750
+          },
+          "variance": {
+            "hourly": -2500,
+            "permit": 0,
+            "total": -2500
+          }
+        },
+        {
+          "zoneCode": 87,
+          "zoneName": "Zone 2",
+          "nonPeak": {
+            "hourly": 91250,
+            "permit": 0,
+            "total": 91250
+          },
+          "peak": {
+            "hourly": 88750,
+            "permit": 0,
+            "total": 88750
+          },
+          "variance": {
+            "hourly": -2500,
+            "permit": 0,
+            "total": -2500
+          }
+        }
+      ]
+    },
+    {
+      "reportName": "ReportName 7",
+      "reportHeader": "ReportName 7",
+      "zoneSummaryList": [
+        {
+          "zoneCode": 87,
+          "zoneName": "Zone 1",
+          "nonPeak": {
+            "hourly": 91250,
+            "permit": 0,
+            "total": 91250
+          },
+          "peak": {
+            "hourly": 88750,
+            "permit": 0,
+            "total": 88750
+          },
+          "variance": {
+            "hourly": -2500,
+            "permit": 0,
+            "total": -2500
+          }
+        },
+        {
+          "zoneCode": 87,
+          "zoneName": "Zone 2",
+          "nonPeak": {
+            "hourly": 91250,
+            "permit": 0,
+            "total": 91250
+          },
+          "peak": {
+            "hourly": 88750,
+            "permit": 0,
+            "total": 88750
+          },
+          "variance": {
+            "hourly": -2500,
+            "permit": 0,
+            "total": -2500
+          }
+        },
+        {
+          "zoneCode": 87,
+          "zoneName": "Zone 2",
+          "nonPeak": {
+            "hourly": 91250,
+            "permit": 0,
+            "total": 91250
+          },
+          "peak": {
+            "hourly": 88750,
+            "permit": 0,
+            "total": 88750
+          },
+          "variance": {
+            "hourly": -2500,
+            "permit": 0,
+            "total": -2500
+          }
+        }
+      ]
+    },
+    {
+      "reportName": "ReportName 8",
+      "reportHeader": "ReportName 8",
+      "zoneSummaryList": [
+        {
+          "zoneCode": 87,
+          "zoneName": "Zone 1",
+          "nonPeak": {
+            "hourly": 91250,
+            "permit": 0,
+            "total": 91250
+          },
+          "peak": {
+            "hourly": 88750,
+            "permit": 0,
+            "total": 88750
+          },
+          "variance": {
+            "hourly": -2500,
+            "permit": 0,
+            "total": -2500
+          }
+        },
+        {
+          "zoneCode": 87,
+          "zoneName": "Zone 2",
+          "nonPeak": {
+            "hourly": 91250,
+            "permit": 0,
+            "total": 91250
+          },
+          "peak": {
+            "hourly": 88750,
+            "permit": 0,
+            "total": 88750
+          },
+          "variance": {
+            "hourly": -2500,
+            "permit": 0,
+            "total": -2500
+          }
+        },
+        {
+          "zoneCode": 87,
+          "zoneName": "Zone 2",
+          "nonPeak": {
+            "hourly": 91250,
+            "permit": 0,
+            "total": 91250
+          },
+          "peak": {
+            "hourly": 88750,
+            "permit": 0,
+            "total": 88750
+          },
+          "variance": {
+            "hourly": -2500,
+            "permit": 0,
+            "total": -2500
+          }
+        }
+      ]
+    },
+    {
+      "reportName": "ReportName 9",
+      "reportHeader": "ReportName 9",
+      "zoneSummaryList": [
+        {
+          "zoneCode": 87,
+          "zoneName": "Zone 1",
+          "nonPeak": {
+            "hourly": 91250,
+            "permit": 0,
+            "total": 91250
+          },
+          "peak": {
+            "hourly": 88750,
+            "permit": 0,
+            "total": 88750
+          },
+          "variance": {
+            "hourly": -2500,
+            "permit": 0,
+            "total": -2500
+          }
+        },
+        {
+          "zoneCode": 87,
+          "zoneName": "Zone 2",
+          "nonPeak": {
+            "hourly": 91250,
+            "permit": 0,
+            "total": 91250
+          },
+          "peak": {
+            "hourly": 88750,
+            "permit": 0,
+            "total": 88750
+          },
+          "variance": {
+            "hourly": -2500,
+            "permit": 0,
+            "total": -2500
+          }
+        },
+        {
+          "zoneCode": 87,
+          "zoneName": "Zone 2",
+          "nonPeak": {
+            "hourly": 91250,
+            "permit": 0,
+            "total": 91250
+          },
+          "peak": {
+            "hourly": 88750,
+            "permit": 0,
+            "total": 88750
+          },
+          "variance": {
+            "hourly": -2500,
+            "permit": 0,
+            "total": -2500
+          }
+        }
+      ]
+    }
+  ],
+  "projectedCostSummaries": [
+    {
+      "reportName": "ReportName 1",
+      "reportHeader": "ReportName 1",
+      "zoneEquipmentSummaryList": [
+        {
+          "zoneId": 0,
+          "zoneName": "Zone 1",
+          "zoneCode": 47,
+          "equipmentCost": 50000,
+          "estimatedSoftwareFees": 7200,
+          "estimatedCreditCardTransactionFees": 14235,
+          "estimatedCostOfAdditionalSparesAndMisc": 10000,
+          "subtotalOperatingCost": 31435,
+          "total": 81435,
+          "warrantyCostYear2": 5000,
+          "warrantyCostYear3": 5000,
+          "warrantyCostYear4": 5000,
+          "warrantyCostYear5": 5000,
+          "totalEstimatedEquipmentAndOperatingCost1": 81435,
+          "totalEstimatedEquipmentAndOperatingCost2": 117870,
+          "totalEstimatedEquipmentAndOperatingCost3": 154305,
+          "totalEstimatedEquipmentAndOperatingCost4": 190740,
+          "totalEstimatedEquipmentAndOperatingCost5": 227175
+        },
+        {
+          "zoneId": 0,
+          "zoneName": "Zone 2",
+          "zoneCode": 48,
+          "equipmentCost": 50000,
+          "estimatedSoftwareFees": 7200,
+          "estimatedCreditCardTransactionFees": 14235,
+          "estimatedCostOfAdditionalSparesAndMisc": 10000,
+          "subtotalOperatingCost": 31435,
+          "total": 81435,
+          "warrantyCostYear2": 5000,
+          "warrantyCostYear3": 5000,
+          "warrantyCostYear4": 5000,
+          "warrantyCostYear5": 5000,
+          "totalEstimatedEquipmentAndOperatingCost1": 81435,
+          "totalEstimatedEquipmentAndOperatingCost2": 117870,
+          "totalEstimatedEquipmentAndOperatingCost3": 154305,
+          "totalEstimatedEquipmentAndOperatingCost4": 190740,
+          "totalEstimatedEquipmentAndOperatingCost5": 227175
+        },
+        {
+          "zoneId": 0,
+          "zoneName": "Combined",
+          "zoneCode": 0,
+          "equipmentCost": 100000,
+          "estimatedSoftwareFees": 14400,
+          "estimatedCreditCardTransactionFees": 28470,
+          "estimatedCostOfAdditionalSparesAndMisc": 20000,
+          "subtotalOperatingCost": 62870,
+          "total": 162870,
+          "warrantyCostYear2": 10000,
+          "warrantyCostYear3": 10000,
+          "warrantyCostYear4": 10000,
+          "warrantyCostYear5": 10000,
+          "totalEstimatedEquipmentAndOperatingCost1": 162870,
+          "totalEstimatedEquipmentAndOperatingCost2": 235740,
+          "totalEstimatedEquipmentAndOperatingCost3": 308610,
+          "totalEstimatedEquipmentAndOperatingCost4": 381480,
+          "totalEstimatedEquipmentAndOperatingCost5": 454350
+        }
+      ]
+    }
+  ]
+}

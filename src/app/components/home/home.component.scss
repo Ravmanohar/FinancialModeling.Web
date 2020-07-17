@@ -1,0 +1,14 @@
+.dixon-card {
+  height: 100%;
+}
+.chart-row {
+  &:first-child {
+    margin-top: 20px;
+  }
+  margin-top: 50px;
+  margin-bottom: 50px;
+  .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,66 @@
+{
+    "clientId": 0,
+    "clientName": "Texas",
+    "createdById": 0,
+    "isPeakSeasonPricing": true,
+    "onStreetZones": [
+        {
+            "zoneId": 0,
+            "zoneName": "Zone1"
+        },
+        {
+            "zoneId": 0,
+            "zoneName": "Zone2"
+        }
+    ],
+    "offStreetZones": [
+        {
+            "zoneId": 0,
+            "zoneName": "Zone1"
+        },
+        {
+            "zoneId": 0,
+            "zoneName": "Zone2"
+        }
+    ],
+    "garagesZones": [
+        {
+            "zoneId": 0,
+            "zoneName": "Zone1"
+        },
+        {
+            "zoneId": 0,
+            "zoneName": "Zone2"
+        }
+    ],
+    "onStreetPermits": [
+        {
+            "permitId": 0,
+            "permitName": "Residential"
+        },
+        {
+            "permitId": 0,
+            "permitName": "Employee"
+        }
+    ],
+    "offStreetPermits": [
+        {
+            "permitId": 0,
+            "permitName": "Residential"
+        },
+        {
+            "permitId": 0,
+            "permitName": "Employee"
+        }
+    ],
+    "garagesPermits": [
+        {
+            "permitId": 0,
+            "permitName": "Residential"
+        },
+        {
+            "permitId": 0,
+            "permitName": "Employee"
+        }
+    ]
+}

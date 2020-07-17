@@ -1,0 +1,33 @@
+// .modal-dialog{
+//     width: 80%;
+//     max-width: unset;
+// }
+
+.main-label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.dixon-checkbox,
+.col-form-label {
+  font-weight: bold;
+}
+
+.wizard-buttons {
+  display: flex;
+  justify-content: flex-end;
+  button {
+    margin-left: 10px;
+  }
+}
+
+.modal-body {
+  height: 70vh;
+  overflow: auto;
+}
+
+#btn-edit-client {
+  position: absolute;
+  top: -30px;
+  right: 0;
+}
